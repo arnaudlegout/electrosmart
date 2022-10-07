@@ -1,7 +1,7 @@
 # README #
 
-ElectroSmart is an academic research project started in 2014 by Arnaud Legout at Inria,
-Sophia Antipolis, France.
+ElectroSmart is an academic research project started in 2014 by 
+[Arnaud Legout](https://www-sop.inria.fr/members/Arnaud.Legout/) at Inria, Sophia Antipolis, France.
 
 The academic Web page of the project is [here](https://www-sop.inria.fr/members/Arnaud.Legout/Projects/electrosmart.html)
 The public Web page of the project (quite old and not up to date) is [here](https://electrosmart.app/)
