@@ -23,8 +23,8 @@ Cloning the repository and compiling it with Android studio should work out of t
 ### Contribution guidelines ###
 
 If you are willing to contribute code in order to update the official ElectroSmart app available 
-(here)[https://play.google.com/store/apps/details?id=fr.inria.es.electrosmart], contact me.
+[here](https://play.google.com/store/apps/details?id=fr.inria.es.electrosmart), contact me.
 
 ### Who do I talk to? ###
 
-You can contact me at (arnaud.legout@inria.fr)[mailto:arnaud.legout@inria.fr]
+You can contact me at [arnaud.legout@inria.fr](mailto:arnaud.legout@inria.fr)
