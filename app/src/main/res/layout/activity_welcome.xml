@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    BSD 3-Clause License
+
+    Copyright (c) 2014-2022, Arnaud Legout (arnaudlegout), centre Inria de
+    l'Université Côte d'Azur, France. Contact: arnaud.legout@inria.fr
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context="fr.inria.es.electrosmart.activities.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/es_logo_image_contentDescription"
+        app:layout_constraintBottom_toTopOf="@+id/textView01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/es_logo_blue" />
+
+    <TextView
+        android:id="@+id/textView01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/welcome_text"
+        android:textColor="@color/primary_text_color"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider_top"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TableRow
+        android:id="@+id/divider_top"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/lowest_level_background_color"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewPermitsYou"
+        app:layout_constraintTop_toBottomOf="@+id/textView01" />
+
+    <TextView
+        android:id="@+id/TextViewPermitsYou"
+        style="@style/ExplanationPrimaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/welcome_electrosmart_permits_you_to"
+        app:layout_constraintBottom_toTopOf="@+id/measure_your_exposure"
+        app:layout_constraintTop_toBottomOf="@+id/divider_top" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_measure_your_exposure"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:tint="@color/default_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/measure_your_exposure"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/measure_your_exposure"
+        app:srcCompat="@drawable/ic_check_black_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/measure_your_exposure"
+        style="@style/ExplanationPrimaryTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:text="@string/onboarding_intro_measure_your_exposure"
+        app:layout_constraintBottom_toTopOf="@+id/receive_alerts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewPermitsYou" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_receive_alerts"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:tint="@color/default_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/receive_alerts"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/receive_alerts"
+        app:srcCompat="@drawable/ic_check_black_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/receive_alerts"
+        style="@style/ExplanationPrimaryTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:text="@string/onboarding_intro_receive_alerts"
+        app:layout_constraintBottom_toTopOf="@+id/consult_daily_stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toBottomOf="@+id/measure_your_exposure" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_consult_daily_stats"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:tint="@color/default_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/consult_daily_stats"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consult_daily_stats"
+        app:srcCompat="@drawable/ic_check_black_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/consult_daily_stats"
+        style="@style/ExplanationPrimaryTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:text="@string/onboarding_intro_consult_daily_stats"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_85"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toBottomOf="@+id/receive_alerts" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/welcomButtonStart"
+        style="@style/PrimaryButtonStyle"
+        android:text="@string/onboarding_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+</androidx.constraintlayout.widget.ConstraintLayout>

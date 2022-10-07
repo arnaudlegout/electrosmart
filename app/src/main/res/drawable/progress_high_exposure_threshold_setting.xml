@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is a custom component to customize the layout of the seek bar used in the high exposure
+threshold setting to make is transparent -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#00ffffff" />
+        </shape>
+    </item>
+</layer-list>

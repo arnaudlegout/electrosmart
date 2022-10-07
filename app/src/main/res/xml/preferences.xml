@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    BSD 3-Clause License
+
+    Copyright (c) 2014-2022, Arnaud Legout (arnaudlegout), centre Inria de
+    l'Université Côte d'Azur, France. Contact: arnaud.legout@inria.fr
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:key="custom_preference_screen">
+
+    <ListPreference
+        android:entries="@array/pref_list_exposition_metric"
+        android:entryValues="@array/pref_list_exposition_metric_values"
+        android:icon="@drawable/ic_equalizer_black_36dp"
+        android:key="@string/PREF_KEY_EXPOSURE_METRIC"
+        android:summary="@string/settings_preference_exposure_metric_summary"
+        android:title="@string/settings_preference_exposure_metric"
+        app:singleLineTitle="false" />
+
+    <androidx.preference.SwitchPreferenceCompat
+        android:icon="@drawable/ic_playlist_add_black_36dp"
+        android:key="@string/PREF_KEY_ADVANCED_MODE"
+        android:summaryOff="@string/settings_preference_advanced_mode_summary"
+        android:summaryOn="@string/settings_preference_advanced_mode_summary"
+        android:title="@string/settings_preference_advanced_mode"
+        app:singleLineTitle="false" />
+
+    <androidx.preference.SwitchPreferenceCompat
+        android:icon="@drawable/ic_perm_scan_wifi_black_36dp"
+        android:key="@string/PREF_KEY_BACKGROUND_WIFI_SCAN"
+        android:summaryOff="@string/settings_preference_background_wifi_scan_text_summary"
+        android:summaryOn="@string/settings_preference_background_wifi_scan_text_summary"
+        android:title="@string/settings_preference_background_wifi_scan_text"
+        app:singleLineTitle="false" />
+
+    <androidx.preference.SwitchPreferenceCompat
+        android:icon="@drawable/ic_bluetooth_black_36dp"
+        android:key="@string/PREF_KEY_ENABLE_BT_AUTOMATICALLY"
+        android:summaryOff="@string/settings_preference_enable_bt_automatically_summary"
+        android:summaryOn="@string/settings_preference_enable_bt_automatically_summary"
+        android:title="@string/settings_preference_enable_bt_automatically"
+        app:singleLineTitle="false" />
+
+    <androidx.preference.SwitchPreferenceCompat
+        android:icon="@drawable/ic_network_cell_black_36dp"
+        android:key="@string/PREF_KEY_SYNC_CELLULAR"
+        android:summaryOff="@string/settings_preference_sync_in_cellular_summary"
+        android:summaryOn="@string/settings_preference_sync_in_cellular_summary"
+        android:title="@string/settings_preference_sync_in_cellular"
+        app:singleLineTitle="false" />
+
+    <androidx.preference.SwitchPreferenceCompat
+        android:icon="@drawable/ic_view_list_black_36dp"
+        android:key="@string/PREF_KEY_SHOW_INSTRUMENT"
+        android:summaryOff="@string/settings_preference_show_instrument_summary"
+        android:summaryOn="@string/settings_preference_show_instrument_summary"
+        android:title="@string/settings_preference_show_instrument"
+        app:singleLineTitle="false" />
+
+    <ListPreference
+        android:entries="@array/pref_list_history_number_of_days"
+        android:entryValues="@array/pref_list_history_number_of_days_values"
+        android:icon="@drawable/ic_history_black_36dp"
+        android:key="@string/PREF_KEY_NUMBER_OF_DAYS_IN_HISTORY"
+        android:summary="@string/settings_preference_history_nb_days_summary"
+        android:title="@string/settings_preference_history_nb_days"
+        app:singleLineTitle="false" />
+
+    <androidx.preference.SwitchPreferenceCompat
+        android:icon="@drawable/ic_brightness_4_black_24dp"
+        android:key="@string/PREF_KEY_DARK_MODE"
+        android:summaryOff="@string/settings_preference_dark_mode_summary"
+        android:summaryOn="@string/settings_preference_dark_mode_summary"
+        android:title="@string/settings_preference_dark_mode_title"
+        app:singleLineTitle="false" />
+
+    <PreferenceCategory
+        android:key="@string/PREF_KEY_NOTIFICATION_HIGH_EXPOSURE_CATEGORY"
+        android:title="@string/settings_preference_high_exposure_notif_title">
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="@string/PREF_KEY_NOTIFICATION_EXPOSURE"
+            android:summaryOff="@string/settings_preference_notification_exposure_summary"
+            android:summaryOn="@string/settings_preference_notification_exposure_summary"
+            android:title="@string/settings_preference_notification_exposure" />
+        <ListPreference
+            android:defaultValue="@string/PREF_VALUE_NOTIFICATION_IMPORTANCE_NONE"
+            android:entries="@array/pref_list_notification_style"
+            android:entryValues="@array/pref_list_notification_style_values"
+            android:key="@string/PREF_KEY_NOTIFICATION_EXPOSURE_IMPORTANCE"
+            android:summary="@string/settings_preference_notification_importance_summary"
+            android:title="@string/settings_preference_notification_importance" />
+        <fr.inria.es.electrosmart.ui.PreferenceSettingHighExposure
+            android:key="@string/PREF_KEY_NOTIFICATION_EXPOSURE_THRESHOLD"
+            android:layout="@layout/_preference_high_exposure_setting"
+            app:allowDividerAbove="false"
+            app:allowDividerBelow="true"
+            app:iconSpaceReserved="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/PREF_KEY_NOTIFICATION_NEW_SOURCE_CATEGORY"
+        android:title="@string/settings_preference_new_source_notif_title">
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="@string/PREF_KEY_NOTIFICATION_NEW_SOURCE"
+            android:summaryOff="@string/setting_preference_notification_new_source_summary"
+            android:summaryOn="@string/setting_preference_notification_new_source_summary"
+            android:title="@string/settings_preference_notification_new_source" />
+        <ListPreference
+            android:defaultValue="@string/PREF_VALUE_NOTIFICATION_IMPORTANCE_NONE"
+            android:entries="@array/pref_list_notification_style"
+            android:entryValues="@array/pref_list_notification_style_values"
+            android:key="@string/PREF_KEY_NOTIFICATION_NEW_SOURCE_IMPORTANCE"
+            android:summary="@string/settings_preference_notification_importance_summary"
+            android:title="@string/settings_preference_notification_importance" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/PREF_KEY_DEBUG_SETTINGS"
+        android:title="@string/settings_preference_debug_title">
+        <CheckBoxPreference
+            android:key="@string/PREF_KEY_AGGRESSIVE_WIFI_SCAN"
+            android:summary="@string/settings_preference_do_aggressive_wifi_scan_summary"
+            android:title="@string/settings_preference_do_aggressive_wifi_scan" />
+
+        <CheckBoxPreference
+            android:key="@string/PREF_KEY_AGGRESSIVE_BT_SCAN"
+            android:summary="@string/settings_preference_do_aggressive_bt_scan_summary"
+            android:title="@string/settings_preference_do_aggressive_bt_scan" />
+
+        <ListPreference
+            android:entries="@array/debug_list_background_scan_interval_list"
+            android:entryValues="@array/debug_list_background_scan_interval_values"
+            android:key="@string/PREF_KEY_MEASUREMENT_CYCLE_BACKGROUND"
+            android:summary="@string/settings_preference_do_measurement_cycle_background_summary"
+            android:title="@string/settings_preference_do_measurement_cycle_background" />
+
+        <ListPreference
+            android:entries="@array/debug_list_protection_test_duration"
+            android:entryValues="@array/debug_list_protection_test_duration_values"
+            android:key="@string/PREF_KEY_PROTECTION_TEST_DURATION"
+            android:summary="@string/settings_preference_protection_test_duration_summary"
+            android:title="@string/settings_preference_protection_test_duration" />
+
+        <CheckBoxPreference
+            android:key="@string/PREF_KEY_WARDRIVE_MODE"
+            android:summary="@string/settings_preference_wardrive_mode_summary"
+            android:title="@string/settings_preference_wardrive_mode" />
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE resources [<!ENTITY faq_url "https://electrosmart.app/faq/?utm_source=electrosmartapp&amp;utm_medium=referral"><!ENTITY es_support_email "support@electrosmart.app"><!ENTITY es_playstore_url "https://play.google.com/store/apps/details?id=fr.inria.es.electrosmart">]>
+<resources>
+    <string name="about">Según lo que establece el artículo 13 del Reglamento General de Protección
+      de Datos (GDPR), cedemos la siguiente información sobre los datos que recopilamos.\n\n
+
+        La aplicación ElectroSmart recopila los siguientes datos:\n
+      - La señal recibida de la potencia medida periódicamente por el teléfono inteligente,
+      por ejemplo, cada 20 minutos. Las señales medidas pueden ser, en función
+      de la compatibilidad del teléfono inteligente, Wi-Fi, Bluetooth, GSM, CDMA, 3G, 4G y 5G;\n
+      - Información sobre las infraestructuras emisoras (nombre del punto de acceso, ID de
+      la estación base, etc.);\n
+      - la localización y la orientación de su teléfono inteligente cuando se realiza
+      la medición;\n
+      - la marca, modelo y versión de Android del teléfono inteligente;\n
+      - información sobre el uso de su aplicación;\n
+      - información que acepta compartir con el uso, como nombre, dirección de correo electrónico,
+      edad, sexo o cómo se siente con las ondas.\n\n
+
+        Para proporcionarle estadísticas diarias y alertas de exposición,
+         ElectroSmart accede y recopila los datos descritos anteriormente en segundo plano. Esta
+         incluye acceso a la ubicación en segundo plano.\n\n
+    </string>
+
+    <!-- Nav Drawer -->
+    <string name="drawer_open">Abrir el menú lateral</string>
+    <string name="drawer_close">Cerrar el menú lateral</string>
+    <string name="nav_measure">Inicio</string>
+    <string name="nav_instrument">Instrumento</string>
+    <string name="nav_encourage_us">Apóyanos</string>
+    <string name="nav_tell_your_friends">Cuéntaselo a tus amigos</string>
+    <string name="nav_send_to">Enviar a</string>
+    <string name="nav_invite_text">¡Hola! Estoy usando una aplicación increíble para reducir mi exposición a los campos electromagnéticos. Te recomiendo que la pruebes. Descárgala en https://electrosmart.app/</string>
+    <string name="nav_give_us_feedback">Danos tu opinión</string>
+    <string name="nav_settings">Ajustes</string>
+    <string name="nav_help">Ayuda</string>
+    <string name="nav_encourage_us_err_title">No se ha encontrado ningún navegador</string>
+    <string name="nav_encourage_us_err_text">Necesitas un navegador web para acceder a la
+      Google Play Store y dejarnos una puntuación en estrellas.
+      Puedes acceder directamente entrando en &es_playstore_url;
+    </string>
+    <string name="nav_csv_export_title">Exportar como CSV</string>
+
+    <!-- Nav bottom bar -->
+    <string name="nav_bottom_bar_live">En vivo</string>
+    <string name="nav_bottom_bar_solutions">Soluciones</string>
+    <string name="nav_bottom_bar_statistics">Estadísticas</string>
+
+    <!-- Activities title name-->
+    <string name="title_activity_es_setting">Ajustes</string>
+    <string name="title_activity_es_terms_of_use">Términos de uso</string>
+    <string name="title_activity_es_feedback">Comentarios</string>
+    <string name="title_activity_es_help">Ayuda</string>
+    <string name="title_activity_es_metrics_help">Unidades de exposición</string>
+    <string name="title_activity_es_about">Acerca de</string>
+
+    <!-- Agreement activity-->
+    <string name="agree_settings_terms">Términos de uso y Política de privacidad</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+
+    <!-- Metric explanation dialog-->
+    <string name="dialog_metric_title_escore">Comprender qué es la exposición</string>
+    <string name="dialog_metric_title_dBm">Comprender qué son los dBm</string>
+    <string name="dialog_metric_title_watt">Comprender qué es el vatio</string>
+    <string name="dialog_metric_description_escore">Tu valor de <i>exposición</i> es una puntuación
+        simple e intuitiva entre 0 y 100.\n\nPor ejemplo:</string>
+    <string name="dialog_metric_description_dBm">El <i>dBm</i> es una unidad muy utilizada para
+        medir la potencia.\n\nCuando el valor del dBm disminuye en 3, tu exposición se reduce a la
+        mitad.\n\nPor ejemplo:</string>
+    <string name="dialog_metric_description_power">El <i>vatio</i> es la unidad estándar de
+        potencia.\n\nPor ejemplo:</string>
+    <string name="dialog_metric_starred_text">Mediciones realizadas con un punto de acceso Wi-Fi
+        en un entorno controlado (cámara anecoica)</string>
+
+    <string name="dialog_metric_table_header_distance">Distancia</string>
+    <string name="dialog_metric_table_distance_content">5 cm\n5 m \n10 m</string>
+    <string name="dialog_metric_text_escore">Índice de exposición</string>
+    <string name="dialog_metric_text_dBm">dBm</string>
+    <string name="dialog_metric_text_power">Vatio</string>
+    <string name="dialog_metric_table_metric_content_escore">90/100\n60/100\n40/100</string>
+    <string name="dialog_metric_table_metric_content_dBm">-5\n-50\n-80</string>
+    <string name="dialog_metric_table_metric_content_power">316,2 μW\n10,0 nW\n10,0 pW</string>
+    <string name="dialog_metric_imageView_router_contentDescription">Imagen del router</string>
+
+    <!-- Help activity-->
+    <string name="icon_description_metrics_help">Icono de ayuda de las unidades de exposición</string>
+    <string name="icon_description_terms_of_use">Icono de los términos de uso</string>
+    <string name="icon_description_faq">Icono de las preguntas frecuentes</string>
+    <string name="icon_description_about">Sobre el icono</string>
+    <string name="help_item_title_exposure_metrics">Unidades de exposición</string>
+    <string name="help_item_title_terms_of_use">Términos de uso</string>
+    <string name="help_item_title_faq">Preguntas frecuentes</string>
+    <string name="help_item_title_about">Acerca de</string>
+    <string name="help_item_link_faq">&faq_url;</string>
+    <string name="help_faq_error_title">No se ha encontrado ningún navegador</string>
+    <string name="help_faq_error_text">Necesitas un navegador web para acceder a las preguntas
+      frecuentes. Puedes acceder directamente entrando en &faq_url;
+    </string>
+
+    <!-- Metrics help activity-->
+    <string name="help_exposure_metric_title">¿Cómo seleccionar y comprender las unidades de exposición?</string>
+    <string name="help_action_hints_title">¿Qué tengo que hacer?</string>
+
+    <string name="help_exposure_metric_text">En ElectroSmart proponemos tres unidades de exposición
+        que representan una potencia recibida.\n\n
+        • <b>Índice de exposición</b>. Esta es la unidad más simple que recomendamos utilizar.
+        Cuando tu índice de exposición aumenta en 2, tu exposición real se duplica. Tu exposición
+        varía entre 0 (la exposición más baja) y 100.\n\n
+        • <b>dBm</b>. Esta es una escala logarítmica de una potencia en mW. Es una unidad común
+        para los físicos. En el rango detectado por ElectroSmart, los valores son siempre negativos.
+        Cuanto menor es el valor, menor es la potencia. Si aumentas tu valor en 3 dBm, duplicas tu
+        exposición, si lo reduces en 3 dBm, reduces a la mitad tu exposición (por ejemplo, -60 dBm
+        representa el doble de la potencia representada por -63 dBm).\n\n
+        • <b>Vatios</b>. Este es el valor directo de la potencia recibida en vatios. Puede ser
+        interesante darse cuenta de que parte de la potencia recibida es extremadamente baja.
+        Por ejemplo, 1 nW es 0,000000001 vatios.
+    </string>
+    <string name="help_action_hints_text">Te preguntarás: ¿y ahora qué? A medida que ElectroSmart
+        te muestra las fuentes de las ondas electromagnéticas, puedes tomar una decisión informada
+        para reducir tu exposición. Notarás que unos pocos metros pueden ser muy importantes
+        para reducir tu exposición. Juega con ElectroSmart y observa el impacto que se genera
+        cuando te mueves por las fuentes (por ejemplo, tu punto de acceso Wi-Fi). También debes
+        tener en cuenta que cuando utilizas tu teléfono para hacer una llamada o acceder a Internet,
+        este se convertirá en tu mayor fuente de exposición. Además, cuanto menor sea la exposición
+        en el celular (2G, 3G, 4G, 5G), mayor será la emisión de tu teléfono cuando te comuniques
+        (teléfono o datos). Por lo tanto, te recomendamos que utilices auriculares con cable cuando
+        hagas una llamada. \n\n</string>
+
+    <!-- About activity-->
+    <string name="copyright">© 2014-%s Inria Sophia Antipolis - Méditerranée / Université Côte
+        d\'Azur. \n Todos los derechos reservados.</string>
+    <string name="version">Versión %s</string>
+    <string name="profile_id">ID del perfil: %1$s %2$s</string>
+    <string name="profile_not_created_text">Perfil no creado %1$s</string>
+    <string name="syncing">(Sincronizando datos)</string>
+
+    <!-- Owayn fragment -->
+    <string name="owayn">Prueba de Lambs</string>
+    <string name="owayn_button_start">Comenzar</string>
+    <string name="owayn_button_try_again">Inténtalo de nuevo</string>
+    <string name="owayn_button_measure">Medir</string>
+    <string name="owayn_button_airplane_mode_leave">Abandonar</string>
+    <string name="owayn_button_resume">Reanudar</string>
+    <string name="owayn_phone_outside_boxer">Primero coloca tu teléfono inteligente en una mesa
+        <b>al lado del medidor.</b>
+  </string>
+    <string name="owayn_scan_out_measuring">Estamos midiendo las ondas en tu entorno.
+        <b>Por favor, espera.</b>
+  </string>
+    <string name="owayn_scan_out_volume_on">Sube el <b>volumen.</b> Reproduciremos un sonido
+        cuando la medición se haya completado.</string>
+    <string name="owayn_scan_out_one_more_minute">
+    <b>Un minuto más</b>, por favor…</string>
+    <string name="owayn_scan_out_source_count_zero">No encontramos <b>ninguna fuente de Wi-Fi</b>
+        a tu alrededor.</string>
+    <plurals name="owayn_scan_out_source_count">
+        <item quantity="one">Encontramos &lt;b&gt;%d alguna fuente de Wi-Fi&lt;/b&gt; a tu alrededor.</item>
+        <item quantity="other">Encontramos &lt;b&gt;%d fuentes de Wi-Fi&lt;/b&gt; a tu alrededor.</item>
+    </plurals>
+    <string name="owayn_phone_inside_boxer">Simplemente coloca el teléfono inteligente
+        <b>dentro del medidor.</b>
+  </string>
+    <string name="owayn_phone_inside_test_auto">La prueba comenzará automáticamente.</string>
+    <string name="owayn_result_waves_blocked_percentage">%d%%</string>
+    <string name="owayn_no_protection_message">No se ha bloqueado ninguna onda. <b>¿Hiciste la
+        prueba en el medidor correctamente?</b>
+  </string>
+    <string name="owayn_result_waves_blocked">ondas bloqueadas.</string>
+    <string name="owayn_result_protection_not_bad">¡No está mal!</string>
+    <string name="owayn_result_protection_great">¡Tu protección es muy alta!</string>
+    <string name="owayn_result_to_do_may_try_again">Puedes intentarlo nuevamente para confirmar
+        el resultado.</string>
+    <string name="owayn_result_to_do_measure_waves">Medir las ondas a tu alrededor.</string>
+    <string name="owayn_result_share">Compartir</string>
+    <string name="owayn_generic_error_message">Se ha producido un error. <b>Inténtalo de nuevo.</b>
+  </string>
+    <string name="owayn_no_wifi_error_message">No hay ninguna señal de Wi-Fi a tu alrededor.
+        <b>Necesitamos una señal de Wi-Fi para realizar la prueba.</b>
+  </string>
+    <string name="owayn_out_of_boxer_error_message">Deja tu teléfono inteligente <b>dentro
+        del medidor durante la prueba.</b>
+  </string>
+    <string name="owayn_airplane_mode_message">No puedes ejecutar la prueba de Lambs con el
+        <b>modo avión activado</b>
+  </string>
+    <string name="owayn_location_disabled_error_message">No puedes ejecutar la prueba de Lambs con
+        <b>la ubicación desactivada</b>
+  </string>
+    <string name="owayn_location_permission_message">Necesitamos tener acceso a la <b>ubicación
+        del dispositivo</b> para ejecutar la prueba de Lambs</string>
+    <string name="owayn_location_permission_grant_button">Conceder</string>
+    <string name="owayn_button_enable">Activar</string>
+
+    <!-- HomeFragment -->
+    <string name="home_your_exposure">Mi exposición actual</string>
+    <string name="home_whats_exposing">Detalles de las fuentes que a las que estoy expuesto</string>
+    <string name="home_advice_title">Consejo</string>
+    <plurals name="home_others">
+        <item quantity="one"> &amp; %d otra fuente</item>
+        <item quantity="other"> &amp; %d otras fuentes</item>
+    </plurals>
+    <string name="home_title">ElectroSmart</string>
+    <string name="no_source">No se ha detectado ninguna fuente</string>
+
+    <string name="advice_high_exposure_description_text">Actúa sobre la %1$s fuente &lt;b&gt;%2$s&lt;/b&gt; para alcanzar una exposición moderada</string>
+    <string name="advice_moderate_exposure_description_text">Esta &lt;b&gt;exposición&lt;/b&gt; es razonable y &lt;b&gt;se adapta a la mayoría de las personas&lt;/b&gt;</string>
+    <string name="advice_low_exposure_description_text">Tu &lt;b&gt;exposición&lt;/b&gt; está &lt;b&gt;adaptada a las áreas de descanso&lt;/b&gt;</string>
+
+    <!-- StatisticsFragment -->
+    <string name="statistics_my_exposure">Mi exposición promedio</string>
+    <string name="statistics_title_date_format">EEEE, MMMM d</string>
+    <string name="statistics_yesterday_title">Ayer</string>
+    <string name="statistics_on_date_title">%s</string>
+    <string name="statistics_title">Mis estadísticas diarias</string>
+    <string name="statistics_top_5_sources_yesterday_title">Las 5 fuentes principales de ayer</string>
+    <string name="statistics_top_5_sources_otherday_title">Las 5 fuentes principales</string>
+    <string name="statistics_kind_of_sources_yesterday_title">El tipo de fuentes con mayor exposición ayer</string>
+    <string name="statistics_kind_of_sources_otherday_title">Fuentes con mayor exposición</string>
+    <string name="statistics_no_data">No hay estadísticas para %s.</string>
+    <string name="statistics_no_data_first_day">Tus primeras estadísticas de exposición estarán disponibles mañana.</string>
+    <string name="statistics_cdma_source_name_format">ID de red: %s</string>
+    <string name="statistics_nb_sources_yesterday_title">Número de fuentes encontradas ayer</string>
+    <string name="statistics_nb_sources_otherday_title">Número de fuentes encontradas</string>
+    <string name="statistics_barchart_axis_0h">0 am</string>
+    <string name="statistics_barchart_axis_2h">2 am</string>
+    <string name="statistics_barchart_axis_5h">5 am</string>
+    <string name="statistics_barchart_axis_8h">8 am</string>
+    <string name="statistics_barchart_axis_11h">11 am</string>
+    <string name="statistics_barchart_axis_14h">2 pm</string>
+    <string name="statistics_barchart_axis_17h">5 pm</string>
+    <string name="statistics_barchart_axis_20h">8 pm</string>
+    <string name="statistics_barchart_axis_23h">11 pm</string>
+    <string name="statistics_type_source_percentage_unit">%</string>
+    <string name="statistics_type_source_100_percent">100%</string>
+    <string name="statistics_type_source_99_percent">99%</string>
+    <string name="statistics_type_source_lower_than_1_percent">&lt; 1%</string>
+
+    <!-- DailyStatSummaryFragment -->
+    <string name="daily_stat_summary_date_format">EEEE, MMMM d</string>
+
+    <!-- ExposureDetailsFragment -->
+    <string name="ExposureDetailsToastPaused">Actualizaciones en pausa. ¡Desliza hacia arriba para reanudarlas!</string>
+    <string name="ExposureDetailsToastResumed">¡Actualizaciones reanudadas!</string>
+    <string name="exposure_details_title_datetime_format_yesterday">\'Ayer, \'h a</string>
+    <string name="exposure_details_title_datetime_format_custom">EEEE, MMMM d, h a</string>
+
+    <!-- Recommendation used in HomeFragment and ExposureDetailsFragment -->
+    <string name="recommendation_low">Baja</string>
+    <string name="recommendation_moderate">Moderada</string>
+    <string name="recommendation_high">Alta</string>
+
+    <!-- ErrorFragment -->
+    <string name="error_frag_no_device_location">Debes activar el uso de la ubicación del dispositivo; de lo contrario, la aplicación no funcionará correctamente.</string>
+    <string name="error_frag_btn_use_location">Utilizar ubicación</string>
+    <string name="error_frag_dont_ask_again">No preguntar de nuevo</string>
+    <string name="error_frag_airplane_title">Modo avión activado, la aplicación no puede funcionar correctamente.</string>
+
+    <!-- Exposition details fragment -->
+    <string name="exposition_details_wifi">Puntos de acceso Wi-Fi</string>
+    <string name="exposition_details_bluetooth">Dispositivos Bluetooth</string>
+    <string name="exposition_details_cellular">Antenas de móviles</string>
+
+    <!-- Advice fragment -->
+    <string name="advice_fragment_title">Mi exposición es %s</string>
+    <string name="advice_low_description">Una exposición baja es más sobria que la recomendación del Consejo Europeo.\n\nEsta exposición está adaptada a personas particularmente sensibles o a las áreas de descanso.</string>
+    <string name="advice_moderate_description">Una exposición moderada sigue la recomendación del Consejo Europeo.\n\nPara personas particularmente sensibles o para las áreas de descanso, recomendamos permanecer en una exposición baja.</string>
+    <string name="advice_high_description">Para respetar el principio de sobriedad de la exposición, recomendamos no exceder una exposición moderada.</string>
+    <string name="advice_read_our_article">Método de anotación</string>
+
+    <string name="advice_i_want_to_reduce_my_exposure_title">Quiero reducir mi exposición</string>
+    <string name="advice_reduce_exposure">La fuente %1$s &lt;b&gt;%2$s&lt;/b&gt; representa solo el &lt;b&gt;%3$s%%&lt;/b&gt; de tu exposición &lt;/b&gt;</string>
+
+    <string name="advice_how_to_manage_this_source_title">Cómo actuar sobre esta fuente</string>
+    <string name="advice_poweroff_description">&lt;b&gt;Desactivar&lt;/b&gt; esta fuente reducirá tu exposición en un %1$s%%.</string>
+    <string name="advice_distance_description">Duplicar la <b>distancia</b> hasta la fuente disminuye cuatro veces tu exposición.</string>
+    <string name="advice_isolation_description">Cuando sea apropiado, puedes utilizar un <b>escudo</b> entre la fuente y tú.</string>
+    <string name="advice_recommend_me_a_solution">Recomiéndame una solución.</string>
+
+    <!-- WebView fragment -->
+    <string name="article_webview_electrosmart_index_title">Índice ElectroSmart</string>
+
+    <!-- Solutions fragment -->
+    <string name="solutions">Soluciones</string>
+    <string name="solutions_owayn_name">Lambs</string>
+    <string name="solutions_owayn_description">Cajas medidoras revestidos con plata que te
+        protegen de las ondas</string>
+    <string name="solutions_sybox_name">Sybox</string>
+    <string name="solutions_sybox_description">Te permite adaptar la potencia de tu router Wi-Fi</string>
+    <string name="solutions_percentage_prefix">protección</string>
+    <string name="solutions_learn_more">Más información &gt;</string>
+    <string name="solutions_test">&#128522; Prueba</string>
+    <string name="solution_test_coming_soon_toast">Próximamente</string>
+    <string name="solutions_no_browser_error_title">No se ha encontrado ningún navegador</string>
+    <string name="solutions_no_browser_error_text">Necesitas un navegador web para acceder a esta
+        página. Puede acceder directamente en %s.</string>
+    <string name="solutions_owayn_reduction">99%</string>
+    <string name="solutions_sybox_reduction">95%</string>
+    <string name="solutions_title">Soluciones validadas por ElectroSmart</string>
+    <string name="solutions_description">Hemos probado la reducción de \% of de cada una de las soluciones propuestas. ¿Necesitas que te convenzamos? &#128522; Pruébalos tú mismo.</string>
+    <string name="solutions_suggest_us_title">Sugerir una solución</string>
+    <string name="solutions_suggest_us_description">La probaremos y la agregaremos a las soluciones si funciona bien.</string>
+    <string name="solutions_odysseum_name">Odysseum Protect</string>
+    <string name="solutions_odysseum_belly_band_description">Banda de vientre orgánica antirradiación</string>
+    <string name="solutions_odysseum_plaid_description">Tela fucsia a cuadros antiondas</string>
+
+    <!-- Measurement fragment-->
+    <string name="wifi">Wi-Fi</string>
+    <string name="bt">Bluetooth</string>
+    <string name="cellular">Móvil</string>
+    <string name="edge">EDGE</string>
+    <string name="gprs">GPRS</string>
+    <string name="lte">LTE</string>
+    <string name="gsm">GSM</string>
+    <string name="td_scdma">TD-SCDMA</string>
+    <string name="iwlan">IWLAN</string>
+    <string name="nr">5G</string>
+    <string name="cdma">CDMA</string>
+    <string name="evdo_o">EVDO_O</string>
+    <string name="evdo_a">EVDO_A</string>
+    <string name="evdo_b">EVDO_B</string>
+    <string name="iden">iDEN</string>
+    <string name="onexrtt">CDMA 2000</string>
+    <string name="hspa">HSPA</string>
+    <string name="hsdpa">HSDPA</string>
+    <string name="hsupa">HSUPA</string>
+    <string name="hspap">HSPA+</string>
+    <string name="ehrpd">eHRPD</string>
+    <string name="umts">UMTS</string>
+    <string name="unknown">Desconocido</string>
+
+    <string name="no_data">Sin datos</string>
+    <string name="live">En vivo</string>
+    <string name="history">Historial</string>
+
+    <string name="bt_device_class_name"> - %s</string>
+    <string name="hidden_ssid">SSID oculto</string>
+    <string name="not_available">Nombre del dispositivo no disponible</string>
+    <string name="ghzch_simple">%1$s GHz, canal %2$d</string>
+    <string name="ghzch"> - %1$s GHz, can. %2$d%3$s</string>
+    <string name="wifi_legacy">a/b/g</string>
+    <string name="wifi_n">n</string>
+    <string name="wifi_ac">ac</string>
+    <string name="wifi_ax">ax</string>
+    <string name="wifi_ad">ad</string>
+    <string name="no_operator">Operador no disponible</string>
+    <string name="unknown_operator">Operador desconocido</string>
+    <string name="cellular2G">Móvil 2G</string>
+    <string name="cellular3G">Móvil 3G</string>
+    <string name="cellular4G">Móvil 4G</string>
+    <string name="cellularCDMA">Móvil CDMA</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="mcc">MCC: </string>
+    <string name="mnc">MNC: </string>
+    <string name="cid">CID: </string>
+    <string name="ucid">UCID: </string>
+    <string name="eci">ECI: </string>
+    <string name="rnc">RNC: </string>
+    <string name="enb">eNB: </string>
+    <string name="lac">LAC: </string>
+    <string name="arfcn">AR: </string>
+    <string name="uarfcn">UAR: </string>
+    <string name="earfcn">EAR: </string>
+    <string name="bsic">BSIC: </string>
+    <string name="timing_advance">TA: </string>
+    <string name="ber">BER: </string>
+    <string name="rssi">RSSI: </string>
+    <string name="power">Potencia: </string>
+    <string name="rsrp">RSRP: </string>
+    <string name="rsrq">RSRQ: </string>
+    <string name="rssnr">RSSNR: </string>
+    <string name="cqi">CQI: </string>
+    <string name="psc">PSC: </string>
+    <string name="ecno">ECNO: </string>
+    <string name="pci">PCI: </string>
+    <string name="tac">TAC: </string>
+    <string name="na">---</string>
+    <string name="bandwidth">BW: </string>
+    <string name="nci">NCI: </string>
+    <string name="nrarfcn">ARF: </string>
+    <string name="csi_rsrp">CSI RSRP: </string>
+    <string name="csi_rsrq">RSRQ: </string>
+    <string name="csi_sinr">SINR: </string>
+    <string name="ss_rsrp">SS RSRP: </string>
+    <string name="ss_rsrq">RSRQ: </string>
+    <string name="ss_sinr">SINR: </string>
+    <string name="network_id">NID: </string>
+    <string name="network_id_number">NID: %s</string>
+    <string name="system_id">SID: </string>
+    <string name="basestation_id">BSID: </string>
+    <string name="cdma_latitude">LAT: </string>
+    <string name="cdma_longitude">LON: </string>
+    <string name="ecio">Ec/Io: </string>
+    <string name="snr">SNR: </string>
+    <string name="serving">sirviendo</string>
+    <string name="neighboring">vecino</string>
+    <string name="show_serve_type">(%s en %s)</string>
+    <string name="show_serving_or_neighbor">(%s)</string>
+    <string name="warning_icon">Icono de advertencia</string>
+
+    <string name="ss_imageView_contentDescription">Imagen de intensidad de señal</string>
+
+    <string name="exposure_score_scale">/100</string>
+
+    <!-- Datetime picker dialog -->
+    <string name="quick_jump">Salto rápido</string>
+
+    <!-- Chart -->
+    <string name="yesterday">Ayer</string>
+    <string name="today">Hoy</string>
+    <string name="now">Ahora</string>
+    <string name="live_date_format">HH:mm:ss</string>
+    <string name="history_date_format">EE dd MMM yyyy hh a</string>
+    <string name="history_date_format_today">hh a</string>
+
+    <!-- Feedback activity-->
+    <string name="feedback_send_email_title">Selecciona una aplicación de correo electrónico para enviar tus comentarios…</string>
+    <string name="toast_feedback_no_email_client">No hay ningún cliente de correo electrónico instalado</string>
+    <string name="toast_feedback_empty_message">Escribe un comentario antes de hacer el envío</string>
+    <string name="feedback_type_chooser_title">Elige una categoría de comentarios</string>
+    <string name="feedback_type_bug">He encontrado un error</string>
+    <string name="feedback_type_feature">Por favor, implementar esta función</string>
+    <string name="feedback_type_general">Tengo un comentario general</string>
+    <string name="feedback_type_suggest_solution">Sugerir una solución</string>
+    <string name="feedback_send_button_text">Enviar por correo electrónico</string>
+    <string name="feedback_message_input_hint">Escribe tus comentarios aquí</string>
+    <string name="feedback_message_subject_format">%1$s &lt;%2$s&gt; &lt;%3$d&gt; &lt;%4$s&gt;</string>
+    <string name="feedback_profileid_checkbox_text">Enviar mi ID de perfil</string>
+    <string name="feedback_edit_text_solution">Sugiere aquí una solución que deseas que evaluemos en nuestro laboratorio.</string>
+
+    <!-- Settings activity -->
+    <string name="settings_preference_background_wifi_scan_text">Escaneo de fondo de señal de Wi-Fi</string>
+    <string name="settings_preference_background_wifi_scan_text_summary">Escanear la señal de Wi-Fi en segundo plano incluso si el Wi-Fi está desactivado</string>
+
+    <string name="settings_preference_advanced_mode">Modo avanzado</string>
+    <string name="settings_preference_advanced_mode_summary">Información de señal avanzada para usuarios expertos</string>
+
+    <string name="settings_preference_debug_title">Ajustes de depuración</string>
+    <string name="settings_preference_sync_in_cellular">Sincronización celular</string>
+    <string name="settings_preference_sync_in_cellular_summary">Sincronizar tus mediciones utilizando el móvil</string>
+    <string name="settings_preference_do_aggressive_wifi_scan">Wi-Fi</string>
+    <string name="settings_preference_do_aggressive_wifi_scan_summary">Utilizar una estrategia de escaneo agresivo</string>
+    <string name="settings_preference_do_aggressive_bt_scan">Bluetooth</string>
+    <string name="settings_preference_do_aggressive_bt_scan_summary">Utilizar una estrategia de escaneo agresivo</string>
+    <string name="settings_preference_do_measurement_cycle_background">Ciclo de medición de fondo</string>
+    <string name="settings_preference_do_measurement_cycle_background_summary">Tiempo entre dos escaneos cuando la aplicación está inactiva</string>
+    <string name="settings_preference_wardrive_mode">Wardrive y modo anecoico</string>
+    <string name="settings_preference_wardrive_mode_summary">Este modo suspende la histéresis utilizada para la visualización en el modo actual y mantiene la pantalla siempre encendida</string>
+    <string name="settings_preference_exposure_metric">Unidad de exposición</string>
+    <string name="settings_preference_exposure_metric_summary">%s</string>
+    <string name="settings_preference_notification_title">Notificación</string>
+    <string name="settings_preference_notification_exposure">Activar la notificación</string>
+    <string name="settings_preference_notification_exposure_summary">Notificar cuando tu exposición exceda el umbral</string>
+    <string name="settings_preference_notification_exposure_threshold">Umbral de exposición</string>
+    <string name="settings_preference_notification_importance">Importancia de la notificación</string>
+    <string name="settings_preference_notification_importance_summary">%s</string>
+    <string name="settings_preference_protection_test_duration">Duración de la prueba de protección</string>
+    <string name="settings_preference_protection_test_duration_summary">La duración en segundos para ejecutar una prueba de protección</string>
+    <string name="settings_preference_show_instrument">Mostrar instrumento</string>
+    <string name="settings_preference_show_instrument_summary">Da acceso a la herramienta heredada del instrumento en el menú</string>
+    <string name="settings_preference_enable_bt_automatically">Habilitar automáticamente el Bluetooth</string>
+    <string name="settings_preference_enable_bt_automatically_summary">Se habilitará el Bluetooth
+        cuando inicie la aplicación y se deshabilitará cuando salga de la aplicación.</string>
+    <string name="enable_bt_automatically_settings_dialog_title">¿Lo confirma?</string>
+    <string name="enable_bt_automatically_settings_dialog_description">Si desactiva esta opción,
+        tendrá que activar manualmente el Bluetooth para detectar dispositivos Bluetooth.</string>
+    <string name="settings_preference_history_nb_days">Número máximo de días en las estadísticas</string>
+    <string name="settings_preference_history_nb_days_summary">%s\nAdvertencia: si reduce el número
+        de días, se eliminarán permanentemente las estadísticas más antiguas.</string>
+    <string name="history_two_weeks">2 semanas</string>
+    <string name="history_one_month">1 mes</string>
+    <string name="history_three_months">3 meses</string>
+    <string name="history_six_months">6 meses</string>
+    <string name="history_one_year">1 año</string>
+    <string name="history_forever">Ilimitado</string>
+
+    <string name="settings_preference_airplane_mode_dialog_title">El modo avión está activado</string>
+    <string name="settings_preference_airplane_mode_dialog_text">Sal del modo avión para cambiar esta configuración.</string>
+
+    <string name="settings_preference_high_exposure_notif_title">Notificación de alerta de exposición</string>
+    <string name="settings_preference_new_source_notif_title">Notificación de nueva fuente detectada</string>
+    <string name="settings_preference_notification_new_source">Activar la notificación</string>
+    <string name="setting_preference_notification_new_source_summary">Notificar cuando se detecte una nueva fuente en mis estadísticas diarias</string>
+
+    <string name="settings_preference_notification_system_setting">Opciones del sistema</string>
+    <string name="settings_preference_notification_system_setting_summary">Elige sonidos, vibraciones e importancia</string>
+
+    <string name="settings_preference_dark_mode_title">Forzar tema oscuro</string>
+    <string name="settings_preference_dark_mode_summary">Forzar tema oscuro o seguir las preferencias del sistema</string>
+
+    <string name="activity_does_not_exist_error_title">No se puede cambiar esta configuración</string>
+    <string name="activity_does_not_exist_error_text">Tu versión de Android utiliza un método no estándar para cambiar esta configuración. Consulta la documentación de tu dispositivo.</string>
+
+    <string name="one_minute">1 minuto</string>
+    <string name="two_minute">2 minutos</string>
+    <string name="five_minute">5 minutos</string>
+    <string name="ten_minute">10 minutos</string>
+    <string name="twenty_minute">20 minutos</string>
+    <string name="one_hour">1 hora</string>
+
+    <string name="your_exposure">Tu exposición</string>
+    <string name="exposure_metric">Índice de exposición</string>
+    <string name="dbm_metric">dBm</string>
+    <string name="power_metric">Potencia</string>
+    <string name="na_metric">——</string>
+    <string name="watt_metric">Vatio</string>
+
+    <string name="ssid">SSID</string>
+    <string name="device">Dispositivo</string>
+    <string name="antenna_details">Detalles de la antena</string>
+    <string name="operator">Operador</string>
+
+    <!-- error messages -->
+    <string name="error_no_device_location">Medición de Wi-Fi desactivada</string>
+    <string name="error_no_device_location_explanation">Android requiere la ubicación del dispositivo para medir las señales de Wi-Fi. Toca para activar.</string>
+    <string name="error_no_location_to_application">Todas las mediciones desactivadas</string>
+    <string name="error_no_location_to_application_explanation">Android requiere permitir el acceso a la ubicación del dispositivo para medir las señales. Toca para activar. </string>
+    <string name="error_airplane_mode">Modo avión activado</string>
+    <string name="error_airplane_mode_explanation">Puede que algunas señales no se midan en modo avión. Sal de este modo y reinicia la aplicación para obtener todas las señales.</string>
+
+    <!--sync adapter visible string under "Accounts&Sync" of the device settings-->
+    <string name="sync_settings_title">Sincronización</string>
+    <string name="sync_account_label">Mediciones</string>
+
+    <!-- string resources for ForegroundScanService -->
+    <string name="foreground_service_description">Servicio de primer plano de ElectroSmart para descubrir tu exposición actual</string>
+    <string name="foreground_service_notification_title">ElectroSmart</string>
+    <string name="foreground_service_notification_text">Estamos midiendo tu exposición</string>
+
+    <!-- string resources for notifications -->
+    <string name="notification_channel_name_foreground_service">Medición en ejecución</string>
+    <string name="notification_channel_description_foreground_service">Mostrar cuándo medimos tu exposición en segundo plano</string>
+
+    <string name="notification_channel_name_exposure">Alertas de exposición</string>
+    <string name="notification_channel_description_exposure">Muestra una notificación cuando tu exposición supera el umbral</string>
+
+    <string name="notification_channel_name_feature_discovery">Descubrimiento de características</string>
+    <string name="notification_channel_description_feature_discovery">Muestra algunas notificaciones durante los primeros días de uso de la aplicación para descubrir sus características principales.</string>
+    <string name="notification_statistics_first_time_title">¡Descubre tu primer resumen diario de exposición!</string>
+
+    <string name="notification_channel_name_new_source_detected">Nueva fuente detectada</string>
+    <string name="notification_channel_description_new_source_detected">Muestra el momento en que se detectó una nueva fuente en tus cinco fuentes principales de ayer</string>
+    <plurals name="notification_new_source_detected_title">
+        <item quantity="one">¡Ayer se detectó %d nueva fuente!</item>
+        <item quantity="other">¡Ayer se detectaron %d nuevas fuentes!</item>
+    </plurals>
+
+    <string name="notification_exposure_title">Alerta de exposición</string>
+    <string name="notification_importance_none">Silencio</string>
+    <string name="notification_importance_vibration_only">Solo vibración</string>
+    <string name="notification_importance_sound_only">Solo sonido</string>
+    <string name="notification_importance_vibration_and_sound">Vibración y sonido</string>
+    <string name="notification_line_text_format">%s • %s</string>
+
+    <!-- string resources for onboarding -->
+    <string name="welcome_electrosmart_permits_you_to">ElectroSmart te permite</string>
+    <string name="onboarding_intro_measure_your_exposure">
+    <b>Medir tu exposición</b> a las ondas en tiempo real</string>
+    <string name="onboarding_intro_receive_alerts">
+    <b>Recibir alertas</b> en caso de que tu exposición cambie</string>
+    <string name="onboarding_intro_consult_daily_stats">
+    <b>Acceder a estadísticas diarias</b> sobre tu exposición</string>
+
+    <string name="onboarding_btn_app_location_permission_authorize">Permitir</string>
+    <string name="onboarding_btn_app_location_permission_always_authorize">Permitir siempre</string>
+    <string name="onboarding_btn_continue_anyway">Continuar de todas maneras</string>
+
+    <string name="onboarding_location_permission_explanation_api_23_28"><b>Necesitamos acceder a tu
+        ubicación</b> para medir tu exposición y alertarte en caso de que se produzcan cambios
+        importantes en tu entorno.\n\nOptimizamos la aplicación para que no tenga ningún impacto
+        en tu batería.</string>
+    <string name="onboarding_location_permission_explanation_api29"><b>Necesitamos acceder a tu
+        ubicación en segundo plano</b> para medir tu exposición y alertarte en caso de que se
+        produzcan cambios importantes en tu entorno.\n\nOptimizamos la aplicación para que no tenga
+        ningún impacto en tu batería.</string>
+    <string name="onboarding_location_permission_explanation_foreground_api30">Necesitamos pedirte
+        <b>dos</b> autorizaciones antes de ejecutar la aplicación. Primero, <b>necesitamos acceder a
+            tu ubicación</b> para medir tu exposición mientras usas la aplicación.</string>
+    <string name="onboarding_location_permission_explanation_foreground_api31">Necesitamos pedirte
+        &lt;b&gt;dos&lt;/b&gt; autorizaciones antes de ejecutar la aplicación. &lt;br/&gt;&lt;br/&gt;
+        Primero, &lt;b&gt;necesitamos acceder a tu ubicación precisa&lt;/b&gt; para medir tu
+        exposición mientras usas la aplicación.</string>
+    <string name="onboarding_location_permission_explanation_background_api30">Por último,
+        <b>necesitamos acceder a tu ubicación en segundo plano</b> si deseas tener estadísticas y
+        alertas diarias en caso de cambios importantes en tu entorno.\n\nOptimizamos la aplicación
+        para que no tenga ningún impacto en tu batería.</string>
+    <string name="onboarding_error_app_while_in_use_location">Permitiste el acceso a la ubicación
+        solo mientras utilizabas la aplicación. Se desactivarán algunas funciones.</string>
+    <string name="onboarding_error_no_app_location">Sin el permiso de ubicación, la aplicación no
+        puede funcionar correctamente.</string>
+    <string name="onboarding_error_no_app_location_api31">Sin el permiso de ubicación
+        &lt;b&gt;precisa&lt;/b&gt;, la aplicación no puede funcionar correctamente.</string>
+
+    <string name="onboarding_segment_start_electrosmart">Iniciar ElectroSmart</string>
+    <string name="onboarding_configuring_start_of_service">Inicio del servicio</string>
+    <string name="onboarding_configuring_personalization_of_alerts">Personalización de las alertas</string>
+    <string name="onboarding_configuring_start_of_measures">Inicio de las mediciones de Wi-Fi, Bluetooth y antena móvil</string>
+
+
+    <string name="onboarding_name_question">¿Cuál es tu nombre?</string>
+
+    <string name="onboarding_email_question">¿Cuál es tu correo electrónico?</string>
+    <string name="onboarding_email_question_description">Utilizaremos tu correo electrónico para mantenerte informado sobre nuevas funciones, pero también para pedirte tu opinión.\n\nNo enviamos spam ni compartimos tu dirección.</string>
+
+    <string name="onboarding_sex_question">¿Cuál es tu sexo?</string>
+
+    <string name="onboarding_age_question">¿Cuántos años tienes?</string>
+
+    <string name="onboarding_segment_question">
+    <b>Cuéntanos cómo te sientes con las ondas</b> para configurar automáticamente tus alertas de exposición. Puedes cambiarlas más adelante si lo deseas.</string>
+
+    <string name="onboarding_sex_male">Masculino</string>
+    <string name="onboarding_sex_female">Femenino</string>
+    <string name="onboarding_segment_electrosensitive">Soy electrosensible</string>
+    <string name="onboarding_segment_concerned">Las ondas me dan miedo</string>
+    <string name="onboarding_segment_curious">Solo tengo curiosidad</string>
+    <string name="onboarding_back">Atrás</string>
+    <string name="onboarding_next">Siguiente</string>
+    <string name="onboarding_done_text">Listo</string>
+    <string name="welcome_text">¡Bienvenido!</string>
+    <string name="title_activity_es_profile">Perfil</string>
+    <string name="onboarding_age_99_easter_egg">Bienvenido, Dumbledore :D</string>
+
+    <string name="es_logo_image_contentDescription">Logo de ElectroSmart</string>
+    <string name="activity_welcome_tou_i_accept">Acepto los Términos de uso</string>
+    <string name="onboarding_email_input_hint">Correo electrónico (opcional)</string>
+    <string name="profile_activity_clear_dialog_title">¿Seguro?</string>
+    <string name="profile_activity_clear_dialog_description">Esto eliminará la información de tu perfil de tu dispositivo y de nuestros servidores en la próxima sincronización de datos.</string>
+    <string name="profile_activity_btnclear_text">BORRAR</string>
+    <string name="edit_your_profile">(editar tu perfil)</string>
+    <string name="profile_segment_question">¿Cómo te sientes con las ondas?</string>
+
+    <!-- New exposure score onboarding activity-->
+
+    <string name="csv_export_start">Iniciando exportación CSV…</string>
+    <string name="csv_export_done">¡Exportación CSV hecha!</string>
+    <string name="csv_export_error">¡La exportación CSV falló!</string>
+
+    <!-- BLUETOOTH CLASS -->
+    <string name="COMPUTER_UNCATEGORIZED">Ordenador</string>
+    <string name="COMPUTER_DESKTOP">Escritorio</string>
+    <string name="COMPUTER_SERVER">Servidor</string>
+    <string name="COMPUTER_LAPTOP">Ordenador portátil</string>
+    <string name="COMPUTER_HANDHELD_PC_PDA">PDA</string>
+    <string name="COMPUTER_PALM_SIZE_PC_PDA">PDA</string>
+    <string name="COMPUTER_WEARABLE">Ordenador portátil</string>
+    <string name="PHONE_UNCATEGORIZED">Teléfono</string>
+    <string name="PHONE_CELLULAR">Teléfono móvil</string>
+    <string name="PHONE_CORDLESS">Teléfono inalámbrico</string>
+    <string name="PHONE_SMART">Teléfono inteligente</string>
+    <string name="PHONE_MODEM_OR_GATEWAY">Módem</string>
+    <string name="PHONE_ISDN">Teléfono ISDN</string>
+    <string name="AUDIO_VIDEO_UNCATEGORIZED">Audio vídeo</string>
+    <string name="AUDIO_VIDEO_WEARABLE_HEADSET">Auriculares</string>
+    <string name="AUDIO_VIDEO_HANDSFREE">Manos libres</string>
+    <string name="AUDIO_VIDEO_MICROPHONE">Micrófono</string>
+    <string name="AUDIO_VIDEO_LOUDSPEAKER">Altavoces</string>
+    <string name="AUDIO_VIDEO_HEADPHONES">Cascos</string>
+    <string name="AUDIO_VIDEO_PORTABLE_AUDIO">Audio portátil</string>
+    <string name="AUDIO_VIDEO_CAR_AUDIO">Audio del coche</string>
+    <string name="AUDIO_VIDEO_SET_TOP_BOX">Decodificador de televisión</string>
+    <string name="AUDIO_VIDEO_HIFI_AUDIO">Alta fidelidad</string>
+    <string name="AUDIO_VIDEO_VCR">VCR</string>
+    <string name="AUDIO_VIDEO_VIDEO_CAMERA">Cámara</string>
+    <string name="AUDIO_VIDEO_CAMCORDER">Videocámara</string>
+    <string name="AUDIO_VIDEO_VIDEO_MONITOR">Monitor de vídeo</string>
+    <string name="AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER">Display y altavoz</string>
+    <string name="AUDIO_VIDEO_VIDEO_CONFERENCING">Videoconferencia</string>
+    <string name="AUDIO_VIDEO_VIDEO_GAMING_TOY">Juegos</string>
+    <string name="WEARABLE_UNCATEGORIZED">Dispositivo portátil</string>
+    <string name="WEARABLE_WRIST_WATCH">Reloj de pulsera</string>
+    <string name="WEARABLE_PAGER">Buscapersonas</string>
+    <string name="WEARABLE_JACKET">Chaqueta</string>
+    <string name="WEARABLE_HELMET">Casco</string>
+    <string name="WEARABLE_GLASSES">Gafas</string>
+    <string name="TOY_UNCATEGORIZED">Juguete</string>
+    <string name="TOY_ROBOT">Robot de juguete</string>
+    <string name="TOY_VEHICLE">Vehículo de juguete</string>
+    <string name="TOY_DOLL_ACTION_FIGURE">Muñeca de juguete</string>
+    <string name="TOY_CONTROLLER">Controlador de juguete</string>
+    <string name="TOY_GAME">Juguete</string>
+    <string name="HEALTH_UNCATEGORIZED">Salud</string>
+    <string name="HEALTH_BLOOD_PRESSURE">Presión sanguínea</string>
+    <string name="HEALTH_THERMOMETER">Termómetro</string>
+    <string name="HEALTH_WEIGHING">Peso</string>
+    <string name="HEALTH_GLUCOSE">Glucosa</string>
+    <string name="HEALTH_PULSE_OXIMETER">Oxímetro de pulso</string>
+    <string name="HEALTH_PULSE_RATE">Frecuencia del pulso</string>
+    <string name="HEALTH_DATA_DISPLAY">Visualización de datos de salud</string>
+
+    <string name="MISC">Miscelánea</string>
+    <string name="NETWORKING">Redes</string>
+    <string name="PERIPHERAL">Periférico</string>
+    <string name="IMAGING">Imagen</string>
+    <string name="UNCATEGORIZED">Sin categorizar</string>
+</resources>

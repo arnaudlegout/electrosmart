@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view_sources"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="fr.inria.es.electrosmart.fragments.AdviceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:id="@+id/divider_top"
+            style="@style/LargeDividerStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layout_exposure_recommendation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/divider_top"
+            tools:showIn="@layout/fragment_advice">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_advice"
+                    style="@style/ProtocolImageStyle"
+                    app:srcCompat="@drawable/ic_info_outline_black_24dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_view_advice_description"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/link_advice_read_article"
+                        style="@style/HyperlinkPrimaryTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/advice_read_our_article" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/divider_advice_scale_what_to_do"
+            style="@style/LargeDividerStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_exposure_recommendation" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/advice_i_want_to_reduce_my_exposure_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_advice_scale_what_to_do">
+
+            <TextView
+                android:id="@+id/advice_i_want_to_reduce_my_exposure_title"
+                style="@style/SectionTitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/regular_background_color"
+                android:gravity="start|center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/advice_i_want_to_reduce_my_exposure_title"
+                app:layout_constraintBottom_toTopOf="@+id/linear_layout_advice_description"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_advice_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/advice_i_want_to_reduce_my_exposure_title"
+                tools:showIn="@layout/fragment_home">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/advice_recommendation_dot"
+                        android:layout_width="@dimen/fh_recommendation_dot_layout_width"
+                        android:layout_height="@dimen/fh_recommendation_dot_layout_height"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginEnd="22dp"
+                        android:layout_marginRight="22dp"
+                        android:background="@drawable/circle" />
+
+                    <TextView
+                        android:id="@+id/advice_reduce_exposure"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/advice_reduce_exposure" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/advice_reduce_chevron"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="@color/small_chevron_color"
+                        app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableRow
+            android:id="@+id/divider_advice_what_to_do_sources"
+            style="@style/LargeDividerStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/advice_i_want_to_reduce_my_exposure_layout" />
+
+        <LinearLayout
+            android:id="@+id/how_to_manage_this_source_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_advice_what_to_do_sources">
+
+            <TextView
+                android:id="@+id/textViewManageSource"
+                style="@style/SectionTitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/regular_background_color"
+                android:gravity="start|center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/advice_how_to_manage_this_source_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Advice Power off START -->
+            <LinearLayout
+                android:id="@+id/layout_power_off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/poweroff_image"
+                    style="@style/ProtocolImageStyle"
+                    app:srcCompat="@drawable/ic_power_settings_new_black_24dp" />
+
+                <TextView
+                    android:id="@+id/text_view_advice_power_off_description"
+                    style="@style/PrimaryTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/advice_poweroff_description" />
+            </LinearLayout>
+            <!-- Advice Power off END -->
+
+            <!-- Advice Distance START -->
+            <LinearLayout
+                android:id="@+id/layout_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/distance_image"
+                    style="@style/ProtocolImageStyle"
+                    app:srcCompat="@drawable/ic_settings_ethernet_black_24dp" />
+
+
+                <TextView
+                    android:id="@+id/text_view_advice_distance_description"
+                    style="@style/PrimaryTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/advice_distance_description" />
+            </LinearLayout>
+            <!-- Advice Distance END -->
+
+            <!-- Advice Isolation START -->
+            <LinearLayout
+                android:id="@+id/layout_isolation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/isolation_image"
+                    style="@style/ProtocolImageStyle"
+                    app:srcCompat="@drawable/ic_verified_user_black_36dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_view_advice_isolation_description"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/advice_isolation_description" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/link_recommend_me_a_solution"
+                        style="@style/HyperlinkPrimaryTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/advice_recommend_me_a_solution" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Advice Isolation END -->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/lowest_level_background_color"
+            app:layout_constraintBottom_toTopOf="@+id/divider_bottom"
+            app:layout_constraintTop_toBottomOf="@+id/how_to_manage_this_source_layout" />
+
+        <TableRow
+            android:id="@+id/divider_bottom"
+            style="@style/LargeDividerStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

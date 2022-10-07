@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        applicationId 'fr.inria.es.electrosmart'
+
+        minSdkVersion 16 // JELLY_BEAN
+        // Kitkat 20, L 21, M 23, N 24, O 26, P 28, Q/Android 10: 29, R/Android 11: 30,
+        // S/Android 12: 31
+        targetSdkVersion 30
+
+
+        vectorDrawables.useSupportLibrary = true
+
+        versionCode 118 // version of the application to increase after each new version
+        versionName '1.28'
+        buildConfigField "long", "BUILD_TIME", System.currentTimeMillis() + "L"
+    }
+//    lintOptions {
+//        baseline file("lint-baseline.xml")
+//    }
+    buildTypes {
+        /*
+        Android build system is supposed to generate automatically a variable BuildConfig.DEBUG
+        set to true if it is a debug build, and false otherwise. However, I did not find a clear
+        documentation on this variable, and I found several reports of issues with this variable
+         (such as: https://code.google.com/p/android/issues/detail?id=27940). Even if these
+         issues are quite old, as I am using it for critical tasks (hide some debug
+        components in the release), I am using my own variable IS_RELEASE_BUILD that I fully control.
+         */
+        def IS_RELEASE_BUILD = "IS_RELEASE_BUILD"
+
+        /*
+        according to the SharedPreference documentation in
+        https://developer.android.com/training/data-storage/shared-preferences
+        "When naming your shared preference files, you should use a name that's uniquely
+        identifiable to your app." However, the documentation is not consistent and our
+        experience is that different processes cannot access the same shared preference.
+        To be an the safe side, we define a different shared preference for release and debug
+        builtTypes
+        */
+        def SHARED_PREF_FILE = "SHARED_PREF_FILE"
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", IS_RELEASE_BUILD, "true"
+            buildConfigField "String", SHARED_PREF_FILE, "\"fr.inria.es\""
+            resValue "string", "app_name", "ElectroSmart"
+            resValue "string", "content_authority", "es.electrosmart.fr"
+            resValue "string", "account_type", "es.electrosmart.fr"
+        }
+
+        debug {
+            // I need to enable the resources shrinkage because otherwise I have a compilation
+            // error "Cannot fit requested classes in a single dex file (# methods: 73337 > 65536)"
+            // Both minifyEnabled and shrinkResources must be set to true for resources shrinkage
+            // minifyEnabled true
+            // shrinkResources true
+            // proguard-rules-debug.pro prevents obfuscation that we do not want for a debug build
+            // proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules-debug.pro'
+            // change the app ID so that we do not mix debug and release apps
+            applicationIdSuffix ".debug"
+            buildConfigField "boolean", IS_RELEASE_BUILD, "false"
+            buildConfigField "String", SHARED_PREF_FILE, "\"fr.inria.es.debug\""
+            resValue "string", "app_name", "ESmart debug"
+            resValue "string", "content_authority", "debug.es.electrosmart.fr"
+            resValue "string", "account_type", "debug.es.electrosmart.fr"
+        }
+    }
+    compileOptions {
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.fragment:fragment:1.4.1'
+    implementation 'androidx.legacy:legacy-preference-v14:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    // We need the design support library for the toolbar,tabs, and viewpager
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.browser:browser:1.4.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+
+    // dependency used for in-app reviews
+    implementation 'com.google.android.play:core:1.10.3'
+
+}
+

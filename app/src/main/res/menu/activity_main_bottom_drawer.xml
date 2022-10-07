@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/nav_bottom_bar_live" />
+    <item
+        android:id="@+id/bottom_nav_statistics"
+        android:icon="@drawable/ic_assessment_black_24dp"
+        android:title="@string/nav_bottom_bar_statistics" />
+    <item
+        android:id="@+id/bottom_nav_solutions"
+        android:icon="@drawable/ic_wb_incandescent_24"
+        android:title="@string/nav_bottom_bar_solutions" />
+</menu>

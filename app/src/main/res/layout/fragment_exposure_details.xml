@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_exposition_details_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.inria.es.electrosmart.fragments.ExposureDetailsFragment">
+
+    <TableRow
+        android:id="@+id/divider_top"
+        style="@style/LargeDividerStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ExpandableListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/lowest_level_background_color"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:paddingLeft="@dimen/expandable_list_view_padding"
+        android:paddingRight="@dimen/expandable_list_view_padding"
+        android:paddingBottom="@dimen/expandable_list_view_padding"
+        android:saveEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_top" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

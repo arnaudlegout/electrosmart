@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+General rules for dimension definitions
+
+1) Do not define a dimension in this file that is used in a single location. Instead directly
+use this dimension (e.g., 15dp) in the layout. In this file we must only define dimensions that
+can be factorized and then used to consistently change the layouts. This is in particular le case
+for text.
+-->
+
+<resources>
+    <!-- ####################### NEW DIMENSION CONFIGURATION BEGIN #################### -->
+    <!-- Text dimension definitions  -->
+    <dimen name="exposure_summary_text_size">72sp</dimen>
+
+    <!-- For regular (regular to low resolution) screens -->
+    <dimen name="explanation_primary_text_size">18sp</dimen>
+    <dimen name="explanation_secondary_text_size">16sp</dimen>
+    <!-- For large (high resolution) screens -->
+    <dimen name="explanation_primary_text_size_360dp">20sp</dimen>
+    <dimen name="explanation_secondary_text_size_360dp">20sp</dimen>
+
+    <dimen name="large_primary_text_size">20sp</dimen>
+
+    <dimen name="section_title_text_size">16sp</dimen>
+    <dimen name="primary_text_size">16sp</dimen>
+    <dimen name="secondary_text_size">14sp</dimen>
+
+    <dimen name="large_divider_width">7dp</dimen>
+
+    <!-- ####################### NEW DIMENSION CONFIGURATION END #################### -->
+
+
+    <!--This is the distance of the border of expandable listview from its neighbouring containers.
+    It's also used in the layout of the error tile,
+    and it must be used as padding, not margin, in order to cover the underlying tab container and
+    disable horizontal scrolling.-->
+    <dimen name="expandable_list_view_padding">5dp</dimen>
+    <dimen name="chart_background_corners_radius">20dp</dimen>
+    <dimen name="chart_slot_width">50dp</dimen>
+
+    <!-- Dimensions used in the on-boarding -->
+    <dimen name="onboarding_view_padding">25dp</dimen>
+
+    <!-- Dimensions used in test owayn -->
+    <dimen name="padding_owayn_text_message">10dp</dimen>
+
+    <dimen name="horizontal_margin_owayn_progress_bar">35dp</dimen>
+    <dimen name="vertical_margin_owayn_progress_bar">40dp</dimen>
+    <dimen name="height_owayn_progress_bar">12dp</dimen>
+
+    <!-- Dimensions for new complimentary color theme -->
+    <dimen name="list_child_img_protocol_layout_width">30dp</dimen>
+    <dimen name="list_child_img_protocol_layout_height">18dp</dimen>
+
+    <!-- Dimensions used in fragment_home (fh) -->
+    <dimen name="fh_text_view_your_exposure_marginTop">15dp</dimen>
+
+    <dimen name="fh_es_anim_layout_width">25dp</dimen>
+    <dimen name="fh_es_anim_layout_height">25dp</dimen>
+    <dimen name="fh_recommendation_dot_layout_width">13dp</dimen>
+    <dimen name="fh_recommendation_dot_layout_height">13dp</dimen>
+
+
+    <dimen name="list_child_recommendation_dot_layout_width">13dp</dimen>
+    <dimen name="list_child_recommendation_dot_layout_height">13dp</dimen>
+
+    <dimen name="fh_recommendation_dot_margin_right">15dp</dimen>
+    <dimen name="fh_exposure_scale_height">5dp</dimen>
+    <dimen name="fh_left_margin">15dp</dimen>
+    <dimen name="list_child_recommendation_dot_marginBottom">3dp</dimen>
+    <dimen name="list_child_exposition_dot_marginLeft">5dp</dimen>
+    <dimen name="fh_source_name_paddingRight">5dp</dimen>
+    <dimen name="onboarding_radio_button_padding_top_bottom">10dp</dimen>
+    <dimen name="list_child_exposition_dot_marginRight">0dp</dimen>
+    <dimen name="list_child_dbm_marginRight">5dp</dimen>
+    <dimen name="list_child_connected_marginRight">10dp</dimen>
+    <dimen name="_exposure_scale_marginLeftRight">60dp</dimen>
+    <dimen name="_exposure_scale_marginTop">20dp</dimen>
+    <dimen name="_exposure_scale_marginBottom">25dp</dimen>
+    <dimen name="statistics_bar_width">10dp</dimen>
+    <dimen name="statistics_scale_width">18dp</dimen>
+    <dimen name="statistics_scale_width_when_tick">16dp</dimen>
+    <dimen name="statistics_scale_height">1dp</dimen>
+    <dimen name="statistics_bar_height_max">60dp</dimen>
+    <dimen name="statistics_bar_height_min">0dp</dimen>
+    <dimen name="statistics_bar_margin_right_left">4dp</dimen>
+    <dimen name="statistics_vertical_line_width">2dp</dimen>
+    <dimen name="statistics_vertical_line_height">7dp</dimen>
+    <dimen name="statistics_scale_margin_bottom">3dp</dimen>
+    <dimen name="statistics_new_source_image_width">30dp</dimen>
+    <dimen name="statistics_new_source_image_height">25dp</dimen>
+    <dimen name="statistics_separation_bars_timeline">5dp</dimen>
+    <dimen name="statistics_bar_scale_label_paddingBottom">10dp</dimen>
+    <dimen name="statistics_bottom_grayed_view_height">66dp</dimen>
+
+    <dimen name="statistics_your_exposure_paddingLeft">15dp</dimen>
+    <dimen name="statistics_your_exposure_paddingRight">15dp</dimen>
+    <dimen name="preference_exposure_threshold_marginTop">-16dp</dimen>
+    <dimen name="preference_exposure_threshold_textviews_paddingLeft">56dp</dimen>
+</resources>

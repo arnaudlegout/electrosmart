@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    BSD 3-Clause License
+
+    Copyright (c) 2014-2022, Arnaud Legout (arnaudlegout), centre Inria de
+    l'Université Côte d'Azur, France. Contact: arnaud.legout@inria.fr
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
+
+<!--
+General rules for color definitions
+
+1) Never refer to a color that is not defined in this file. All colors must be centralized
+in this file. Always check whether a relevant color is not already created in this file.
+
+2) Do not mix colors for text with other colors. Text colors must be used only for text.
+-->
+<resources>
+    <!-- Colors for text must not be used for anything else but text -->
+    <color name="primary_text_color">@color/white_dark_mode</color>
+    <color name="secondary_text_color">@color/white_dark_mode</color>
+    <!-- Colors when the text is presented on a dark background, such as a colored button-->
+    <color name="inverted_primary_text_color">@color/white_dark_mode</color>
+
+    <!-- Colors for icons used with the text -->
+    <color name="primary_icon_color">@color/white_dark_mode</color>
+    <color name="secondary_icon_color">@color/white_dark_mode</color>
+
+    <!-- Colors for the accent (ripple effect on components) -->
+    <color name="accent_color">@color/gray_800</color>
+
+    <!-- Colors for icons used in the bottom navigation bar -->
+    <color name="bottom_nav_item_unchecked_color">@color/white_dark_mode</color>
+    <color name="bottom_nav_item_checked_color">@color/default_blue</color>
+
+    <!--  Color of the lowest level background. It is typically used for dividers -->
+    <color name="lowest_level_background_color">@color/gray_800</color>
+
+    <!-- Color of the second level background. It is used for all the rest, typically used for
+    all cards, that is everything on top of the lowest level background -->
+    <color name="regular_background_color">@color/dark_gray</color>
+
+    <!--  Color of the background of the alert dialogs -->
+    <color name="alert_dialog_background">@color/gray_800</color>
+
+    <!-- Color of the chevron used in home and statistic fragments   -->
+    <color name="small_chevron_color">@color/white_dark_mode</color>
+
+    <!-- Background color of the progress bars (when they are not filled) -->
+    <color name="progress_bar_background_color">@color/white_dark_mode</color>
+
+    <!-- Color for a disabled or secondary button -->
+    <color name="secondary_button_color">@color/gray_400</color>
+
+    <!-- recommendation -->
+    <color name="recommendation_dot_green">@color/green_300</color>
+    <color name="recommendation_dot_orange">@color/orange_300</color>
+    <color name="recommendation_dot_red">@color/red_300</color>
+
+    <color name="recommendation_dot_green_10percent_transparent">
+        @color/green_300_transparency_10
+    </color>
+    <color name="recommendation_dot_orange_10percent_transparent">
+        @color/orange_300_transparency_10
+    </color>
+    <color name="recommendation_dot_red_10percent_transparent">
+        @color/red_300_transparency_10
+    </color>
+
+    <!-- Default blue color used in the app -->
+    <color name="default_blue">@color/blue_300</color>
+    <color name="light_blue">@color/blue_200</color>
+
+    <!-- Colors for the ripple when we touch a tile -->
+    <color name="ripple_default_background">@color/regular_background_color</color>
+    <color name="ripple_state_pressed">@color/accent_color</color>
+
+    <!-- #### Colors specific to the instrument #### -->
+    <!--  Used for the exposure score circled progress bar for the instrument -->
+    <color name="exposure_summary_progress_bar_color">@color/default_blue</color>
+    <color name="exposure_summary_progress_bar_background_color">@color/gray_300</color>
+
+    <!-- Color used to show the selected tab in the instrument -->
+    <color name="tab_indicator_color">@color/white_dark_mode</color>
+
+    <!-- Color for the error message in the instrument only-->
+    <color name="error_background">@color/deep_orange_700_transparency_10</color>
+    <color name="error_logo">@color/deep_orange_700</color>
+
+    <!-- Color of the chart when there is no data -->
+    <color name="curves_no_data_color">@color/gray_400</color>
+
+    <!-- Color of the background of the chart -->
+    <color name="chart_background_shape_color">@color/gray_900</color>
+</resources>

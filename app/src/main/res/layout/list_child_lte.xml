@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    BSD 3-Clause License
+
+    Copyright (c) 2014-2022, Arnaud Legout (arnaudlegout), centre Inria de
+    l'Université Côte d'Azur, France. Contact: arnaud.legout@inria.fr
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/child_layout_lte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp">
+
+        <TableLayout
+            android:id="@+id/table_layout_child_operator_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fh_source_name_paddingRight"
+            android:layout_marginRight="@dimen/fh_source_name_paddingRight"
+            android:shrinkColumns="1,2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/child_lte_dbm"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_4G"
+                    android:layout_width="@dimen/list_child_img_protocol_layout_width"
+                    android:layout_height="@dimen/list_child_img_protocol_layout_height"
+                    android:layout_gravity="center_vertical"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:tint="@color/secondary_text_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/child_lte_operator_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/child_lte_operator_name"
+                    app:srcCompat="@drawable/ic_4g" />
+
+                <TextView
+                    android:id="@+id/child_lte_operator_name"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintLeft_toRightOf="@id/img_4G"
+                    app:layout_constraintRight_toLeftOf="@id/child_lte_serv_type"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/child_lte_serv_type"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:paddingEnd="@dimen/fh_source_name_paddingRight"
+                    android:paddingRight="@dimen/fh_source_name_paddingRight"
+                    app:layout_constraintLeft_toRightOf="@id/child_lte_operator_name"
+                    app:layout_constraintRight_toLeftOf="@id/image_view_connected"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_view_connected"
+                    style="@style/SourceConnectedImageViewStyle"
+                    android:layout_marginEnd="@dimen/list_child_connected_marginRight"
+                    android:layout_marginRight="@dimen/list_child_connected_marginRight"
+                    app:layout_constraintLeft_toRightOf="@+id/child_lte_serv_type"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_insert_link_black_24dp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/child_lte_dbm"
+            style="@style/DetailedSignalsTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/list_child_dbm_marginRight"
+            android:layout_marginRight="@dimen/list_child_dbm_marginRight"
+            app:layout_constraintRight_toLeftOf="@+id/exposition_dot"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/exposition_dot"
+            android:layout_width="@dimen/list_child_recommendation_dot_layout_width"
+            android:layout_height="@dimen/list_child_recommendation_dot_layout_height"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/list_child_exposition_dot_marginLeft"
+            android:layout_marginLeft="@dimen/list_child_exposition_dot_marginLeft"
+            android:layout_marginEnd="@dimen/list_child_exposition_dot_marginRight"
+            android:layout_marginRight="@dimen/list_child_exposition_dot_marginRight"
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="@+id/child_lte_dbm"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/child_lte_dbm" />
+
+
+        <LinearLayout
+            android:id="@+id/child_layout_block1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/child_layout_block2"
+            app:layout_constraintTop_toBottomOf="@id/table_layout_child_operator_name">
+
+            <!--column 1-->
+            <LinearLayout
+                android:id="@+id/child_layout_column1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/child_lte_mcc_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/mcc" />
+
+                <TextView
+                    android:id="@+id/child_lte_tac_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/tac" />
+
+                <TextView
+                    android:id="@+id/child_lte_enb_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/enb" />
+
+                <TextView
+                    android:id="@+id/child_lte_rsrp_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/rsrp" />
+
+                <TextView
+                    android:id="@+id/child_lte_rsrq_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/rsrq" />
+            </LinearLayout>
+
+            <!--column 2-->
+            <LinearLayout
+                android:id="@+id/child_layout_column2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/child_lte_mcc"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_tac"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_enb"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_rsrp"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_rsrq"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/child_layout_block2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toRightOf="@id/child_layout_block1"
+            app:layout_constraintRight_toLeftOf="@id/child_layout_block3"
+            app:layout_constraintTop_toBottomOf="@id/table_layout_child_operator_name">
+
+            <!--column 3-->
+            <LinearLayout
+                android:id="@+id/child_layout_column3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/child_lte_mnc_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/mnc" />
+
+                <TextView
+                    android:id="@+id/child_lte_eci_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/eci" />
+
+                <TextView
+                    android:id="@+id/child_lte_cid_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/cid" />
+
+                <TextView
+                    android:id="@+id/child_lte_pci_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/pci" />
+
+                <TextView
+                    android:id="@+id/child_lte_cqi_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/cqi" />
+            </LinearLayout>
+
+            <!--column 4-->
+            <LinearLayout
+                android:id="@+id/child_layout_column4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/child_lte_mnc"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_eci"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_cid"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_pci"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_cqi"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/child_layout_block3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintLeft_toRightOf="@id/child_layout_block2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/table_layout_child_operator_name">
+
+            <!--column 5-->
+            <LinearLayout
+                android:id="@+id/child_layout_column5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/child_lte_bandwidth_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/bandwidth" />
+
+                <TextView
+                    android:id="@+id/child_lte_earfcn_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/earfcn" />
+
+                <TextView
+                    android:id="@+id/child_lte_timing_advance_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/timing_advance" />
+
+                <TextView
+                    android:id="@+id/child_lte_rssi_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/rssi" />
+
+                <TextView
+                    android:id="@+id/child_lte_rssnr_label"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="@string/rssnr" />
+            </LinearLayout>
+
+            <!--column 6-->
+            <LinearLayout
+                android:id="@+id/child_layout_column6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/child_lte_bandwidth"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_earfcn"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_timing_advance"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_rssi"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/child_lte_rssnr"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

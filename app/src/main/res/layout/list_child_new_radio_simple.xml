@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- this LinearLayout is only to indent the child views-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingLeft="10dp">
+
+    <RelativeLayout
+        android:id="@+id/child_layout_new_radio_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <!-- shrinkColumns="1" ensures that the source name shrinks when the layout expands bounds -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fh_source_name_paddingRight"
+            android:layout_marginRight="@dimen/fh_source_name_paddingRight"
+            android:layout_toStartOf="@+id/child_new_radio_dbm_simple"
+            android:layout_toLeftOf="@+id/child_new_radio_dbm_simple"
+            android:shrinkColumns="1">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_4G"
+                    android:layout_width="@dimen/list_child_img_protocol_layout_width"
+                    android:layout_height="@dimen/list_child_img_protocol_layout_height"
+                    android:layout_gravity="center_vertical"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:tint="@color/secondary_text_color"
+                    app:srcCompat="@drawable/ic_new_radio" />
+
+                <TextView
+                    android:id="@+id/child_new_radio_operator_name_simple"
+                    style="@style/DetailedSignalsTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/fh_source_name_paddingRight"
+                    android:layout_marginRight="@dimen/fh_source_name_paddingRight"
+                    android:ellipsize="end" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_view_connected"
+                    style="@style/SourceConnectedImageViewStyle"
+                    android:layout_marginEnd="@dimen/list_child_connected_marginRight"
+                    android:layout_marginRight="@dimen/list_child_connected_marginRight"
+                    app:srcCompat="@drawable/ic_insert_link_black_24dp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/child_new_radio_dbm_simple"
+            style="@style/ExposureDetailedSignalsSimpleModeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/list_child_dbm_marginRight"
+            android:layout_marginRight="@dimen/list_child_dbm_marginRight"
+            android:layout_toStartOf="@+id/exposition_dot"
+            android:layout_toLeftOf="@+id/exposition_dot" />
+
+        <View
+            android:id="@+id/exposition_dot"
+            android:layout_width="@dimen/list_child_recommendation_dot_layout_width"
+            android:layout_height="@dimen/list_child_recommendation_dot_layout_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/list_child_exposition_dot_marginLeft"
+            android:layout_marginLeft="@dimen/list_child_exposition_dot_marginLeft"
+            android:layout_marginEnd="@dimen/list_child_exposition_dot_marginRight"
+            android:layout_marginRight="@dimen/list_child_exposition_dot_marginRight"
+            android:background="@drawable/circle" />
+    </RelativeLayout>
+</LinearLayout>
+

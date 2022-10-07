@@ -1,0 +1,39 @@
+.gradle
+.idea/
+local.properties
+
+/app/build/generated/
+/app/build/intermediates/
+/app/build/tmp/
+/app/build/outputs/lint-results-release-fatal*
+/app/build/outputs/apk/
+/app/build/outputs/lint-results-release-fatal_files/
+/app/build/outputs/logs/
+/app/build/outputs/mapping/release/dump.txt
+/app/build/reports/
+/build
+/captures/
+
+.DS_Store
+
+*.iml
+
+# local files to test the DB
+es.db
+
+# all logcat log
+esLogCat.*
+
+# all .apk files
+*.apk
+
+# temporary files that should not be put in git
+document.docx
+/scripts/mnc.txt
+/scripts/mnc_*.docx
+/scripts/mnc_*.txt
+/scripts/contribution_stats*.txt
+git_blame_users.py
+
+*.plantuml
+*.orig

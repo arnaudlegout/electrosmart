@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_error"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/text_error_title"
+        style="@style/ExplanationPrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="start"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/error_frag_airplane_title"
+        app:autoSizeMaxTextSize="20sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_40"
+        app:layout_constraintStart_toStartOf="@+id/image_error" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_error"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:tint="@color/default_blue"
+        app:layout_constraintBottom_toTopOf="@id/text_error_title"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_airplanemode_active_black_24dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_measure_your_exposure"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:tint="@color/secondary_icon_color"
+        app:layout_constraintBottom_toBottomOf="@+id/measure_your_exposure"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toTopOf="@+id/measure_your_exposure"
+        app:srcCompat="@drawable/ic_block_black_24dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_receive_alerts"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:tint="@color/secondary_icon_color"
+        app:layout_constraintBottom_toBottomOf="@+id/receive_alerts"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toTopOf="@+id/receive_alerts"
+        app:srcCompat="@drawable/ic_block_black_24dp" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_consult_daily_stats"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:tint="@color/secondary_icon_color"
+        app:layout_constraintBottom_toBottomOf="@+id/consult_daily_stats"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toTopOf="@+id/consult_daily_stats"
+        app:srcCompat="@drawable/ic_block_black_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/measure_your_exposure"
+        style="@style/ExplanationSecondaryTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/onboarding_intro_measure_your_exposure"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/receive_alerts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_horizontal_40" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/receive_alerts"
+        style="@style/ExplanationSecondaryTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/onboarding_intro_receive_alerts"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/consult_daily_stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toBottomOf="@+id/measure_your_exposure" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/consult_daily_stats"
+        style="@style/ExplanationSecondaryTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/onboarding_intro_consult_daily_stats"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_20"
+        app:layout_constraintTop_toBottomOf="@+id/receive_alerts" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="fr.inria.es.electrosmart">
+
+    <!-- ################ DANGEROUS PERMISSIONS ########################## -->
+    <!-- LOCATION PERMISSION GROUP -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- STORAGE PERMISSION GROUP -->
+    <!-- uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" / -->
+    <!-- uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" / -->
+    <!-- PHONE PERMISSION GROUP -->
+    <!-- uses-permission android:name="android.permission.READ_PHONE_STATE" / -->
+
+
+    <!-- ################ NORMAL PERMISSIONS ########################## -->
+    <!-- Both permissions are required to enable the wifi card -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- Both permissions are required to enable the BT card and make a scan -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- permissions for the SyncAdapter framework -->
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="false"
+        android:theme="@style/EsTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/EsThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/title_activity_es_setting"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FeedbackActivity"
+            android:label="@string/title_activity_es_feedback"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HelpActivity"
+            android:label="@string/title_activity_es_help"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:label="@string/title_activity_es_profile"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/EsThemeNoActionBar" />
+        <activity
+            android:name=".activities.WelcomeTermsOfUseActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/EsThemeNoActionBar" />
+        <activity
+            android:name=".activities.OnBoardingActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/EsThemeNoActionBar" />
+        <activity
+            android:name=".activities.TermsOfUseActivity"
+            android:label="@string/title_activity_es_terms_of_use"
+            android:parentActivityName=".activities.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MetricsHelpActivity"
+            android:label="@string/title_activity_es_metrics_help"
+            android:parentActivityName=".activities.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="@string/title_activity_es_about"
+            android:parentActivityName=".activities.HelpActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- register the broadcast receivers -->
+        <receiver
+            android:name=".monitors.OnBootBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".scheduling.MeasurementScheduler$AlarmReceiver" />
+        <receiver android:name=".scheduling.MeasurementScheduler$FirstTimeStatisticsAlarmReceiver" />
+        <receiver android:name=".serversync.SyncUtils$SyncAlarmReceiver" />
+
+        <receiver android:name=".scheduling.MeasurementScheduler$NotificationDeletedBroadcastReceiver" />
+        <receiver android:name=".scheduling.MeasurementScheduler$NotificationClickedBroadcastReceiver" />
+
+        <!--
+        exported = false : ensures that no other application can call this service
+                           see doc: https://developer.android.com/guide/components/services#Declaring
+        -->
+        <service
+            android:name=".services.ForegroundScanService"
+            android:description="@string/foreground_service_description"
+            android:exported="false" />
+
+        <!-- declarations for the SyncAdapter framework -->
+        <service
+            android:name=".serversync.AuthenticatorService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <provider
+            android:name=".serversync.StubProvider"
+            android:authorities="@string/content_authority"
+            android:exported="false"
+            android:label="@string/sync_account_label"
+            android:syncable="true" />
+
+        <service
+            android:name=".serversync.SyncService"
+            android:exported="true"
+            android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <!-- end of declarations for the SyncAdapter framework -->
+
+    </application>
+
+</manifest>

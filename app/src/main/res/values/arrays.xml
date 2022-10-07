@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    BSD 3-Clause License
+
+    Copyright (c) 2014-2022, Arnaud Legout (arnaudlegout), centre Inria de
+    l'Université Côte d'Azur, France. Contact: arnaud.legout@inria.fr
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
+
+<resources>
+    <string-array name="debug_list_protection_test_duration">
+        <item>5 secs</item>
+        <item>10 secs</item>
+        <item>15 secs</item>
+        <item>20 secs</item>
+        <item>25 secs</item>
+        <item>30 secs</item>
+        <item>35 secs</item>
+        <item>70 secs</item>
+        <item>120 secs</item>
+        <item>125 secs</item>
+        <item>135 secs</item>
+    </string-array>
+    <string-array name="debug_list_protection_test_duration_values" translatable="false">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>70</item>
+        <item>120</item>
+        <item>125</item>
+        <item>135</item>
+    </string-array>
+    <string-array name="debug_list_background_scan_interval_list">
+        <item>@string/one_minute</item>
+        <item>@string/two_minute</item>
+        <item>@string/five_minute</item>
+        <item>@string/ten_minute</item>
+        <item>@string/twenty_minute</item>
+        <item>@string/one_hour</item>
+    </string-array>
+    <string-array name="debug_list_background_scan_interval_values" translatable="false">
+        <item>60000</item>
+        <item>120000</item>
+        <item>300000</item>
+        <item>600000</item>
+        <item>1200000</item>
+        <item>3600000</item>
+    </string-array>
+
+    <string-array name="pref_list_exposition_metric">
+        <item>@string/exposure_metric</item>
+        <item>@string/dbm_metric</item>
+        <item>@string/watt_metric</item>
+    </string-array>
+
+    <string-array name="pref_list_exposition_metric_values" translatable="false">
+        <item>@string/PREF_VALUE_EXPOSURE_SCORE_METRIC</item>
+        <item>@string/PREF_VALUE_DBM_METRIC</item>
+        <item>@string/PREF_VALUE_POWER_METRIC</item>
+    </string-array>
+
+    <string-array name="pref_list_history_number_of_days">
+        <item>@string/history_two_weeks</item>
+        <item>@string/history_one_month</item>
+        <item>@string/history_three_months</item>
+        <item>@string/history_six_months</item>
+        <item>@string/history_one_year</item>
+        <item>@string/history_forever</item>
+    </string-array>
+
+    <string-array name="pref_list_history_number_of_days_values" translatable="false">
+        <item>@string/DEFAULT_NB_DAYS_IN_HISTORY</item>
+        <item>30</item>
+        <item>90</item>
+        <item>180</item>
+        <item>365</item>
+        <item>2147483647</item>
+    </string-array>
+
+    <string-array name="pref_list_notification_style">
+        <item>@string/notification_importance_none</item>
+        <item>@string/notification_importance_vibration_only</item>
+        <item>@string/notification_importance_sound_only</item>
+        <item>@string/notification_importance_vibration_and_sound</item>
+    </string-array>
+
+    <string-array name="pref_list_notification_style_values" translatable="false">
+        <item>@string/PREF_VALUE_NOTIFICATION_IMPORTANCE_NONE</item>
+        <item>@string/PREF_VALUE_NOTIFICATION_IMPORTANCE_VIBRATION_ONLY</item>
+        <item>@string/PREF_VALUE_NOTIFICATION_IMPORTANCE_SOUND_ONLY</item>
+        <item>@string/PREF_VALUE_NOTIFICATION_IMPORTANCE_VIBRATION_AND_SOUND</item>
+    </string-array>
+</resources>

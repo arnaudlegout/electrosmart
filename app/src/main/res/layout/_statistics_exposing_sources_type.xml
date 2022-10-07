@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/ripple"
+    android:orientation="vertical"
+    tools:showIn="@layout/fragment_statistics">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/protocol_image"
+            style="@style/ProtocolImageStyle"
+            app:srcCompat="@drawable/baseline_bluetooth_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_source_type"
+                style="@style/PrimaryTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:paddingRight="@dimen/fh_source_name_paddingRight" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_source_type"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:indeterminateOnly="false"
+                android:max="100"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progress_horizontal_blue"
+                android:scaleY="1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewExposurePercentage"
+                style="@style/PrimaryTextStyle"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TableRow
+        android:id="@+id/source_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:background="@color/lowest_level_background_color"
+        android:visibility="visible" />
+</LinearLayout>

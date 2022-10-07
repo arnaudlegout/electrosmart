@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view_sources"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context="fr.inria.es.electrosmart.fragments.StatisticsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/divider_top"
+                style="@style/LargeDividerStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewYourExposure"
+                style="@style/LargePrimaryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fh_text_view_your_exposure_marginTop"
+                android:gravity="center"
+                android:paddingStart="@dimen/statistics_your_exposure_paddingLeft"
+                android:paddingLeft="@dimen/statistics_your_exposure_paddingLeft"
+                android:paddingEnd="@dimen/statistics_your_exposure_paddingLeft"
+                android:paddingRight="@dimen/statistics_your_exposure_paddingRight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_top" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewExposureValue"
+                style="@style/ExposureSummaryStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_156dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewYourExposure" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewExposureUnit"
+                style="@style/LightPrimaryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewExposureValue"
+                app:layout_constraintLeft_toRightOf="@+id/textViewExposureValue" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewExposureDiff"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:tint="@color/secondary_text_color"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewExposureValue"
+                app:layout_constraintStart_toEndOf="@+id/textViewExposureUnit"
+                app:layout_constraintTop_toTopOf="@+id/textViewExposureValue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewExposureValueDiff"
+                style="@style/LightPrimaryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewExposureValue"
+                app:layout_constraintStart_toEndOf="@+id/imageViewExposureDiff"
+                app:layout_constraintTop_toTopOf="@+id/textViewExposureValue" />
+
+            <View
+                android:id="@+id/recommendationDot"
+                android:layout_width="@dimen/fh_recommendation_dot_layout_width"
+                android:layout_height="@dimen/fh_recommendation_dot_layout_height"
+                android:background="@drawable/circle"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewRecommendation"
+                app:layout_constraintStart_toStartOf="@+id/textViewExposureValue"
+                app:layout_constraintTop_toTopOf="@+id/textViewRecommendation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewRecommendation"
+                style="@style/PrimaryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/fh_recommendation_dot_margin_right"
+                android:paddingLeft="@dimen/fh_recommendation_dot_margin_right"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_196dp"
+                app:layout_constraintStart_toEndOf="@+id/recommendationDot"
+                app:layout_constraintTop_toBottomOf="@+id/textViewExposureUnit" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/scale_chevron"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:tint="@color/small_chevron_color"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewRecommendation"
+                app:layout_constraintStart_toEndOf="@+id/textViewRecommendation"
+                app:layout_constraintTop_toTopOf="@+id/textViewRecommendation"
+                app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+            <View
+                android:id="@+id/scale_chevron_tap_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/scale_chevron"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewExposureValue" />
+
+            <include layout="@layout/_exposure_scale" />
+
+            <!-- bar chart -->
+            <HorizontalScrollView
+                android:id="@+id/horizontal_scroll_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toStartOf="@+id/scroll_view_forward"
+                app:layout_constraintStart_toEndOf="@+id/scroll_view_backward"
+                app:layout_constraintTop_toBottomOf="@+id/layout_scale">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_bars"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_bar_scale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/statistics_separation_bars_timeline" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_bar_scale_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/statistics_bar_scale_label_paddingBottom">
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/SecondaryTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/statistics_barchart_axis_0h" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/SecondaryTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/statistics_barchart_axis_2h" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/SecondaryTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/statistics_barchart_axis_5h" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/SecondaryTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/statistics_barchart_axis_8h" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/SecondaryTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/statistics_barchart_axis_11h" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/SecondaryTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/statistics_barchart_axis_14h" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/SecondaryTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/statistics_barchart_axis_17h" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/SecondaryTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/statistics_barchart_axis_20h" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/SecondaryTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/statistics_barchart_axis_23h" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/scroll_view_backward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:tint="@color/secondary_text_color"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/horizontal_scroll_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/horizontal_scroll_view"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/scroll_view_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:tint="@color/secondary_text_color"
+                app:layout_constraintBottom_toBottomOf="@+id/horizontal_scroll_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/horizontal_scroll_view"
+                app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/scale_cursor"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/layout_scale"
+                app:layout_constraintEnd_toStartOf="@+id/layout_scale"
+                app:layout_constraintStart_toStartOf="@+id/layout_scale"
+                app:srcCompat="@drawable/ic_cursor_black_24dp"
+                app:tint="@color/recommendation_dot_green" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/scale_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="layout_scale,scale_cursor" />
+
+            <TableRow
+                android:id="@+id/divider_statistics_scale_top5_sources"
+                style="@style/LargeDividerStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll_view" />
+
+            <!--tile for the top 5 sources-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_scale_top5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_statistics_scale_top5_sources">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/layout_top_5_sources_title"
+                    style="@style/SectionTitleTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/regular_background_color"
+                    android:gravity="start|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_top_5_sources"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_top_5_sources"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_top_5_sources_title">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TableRow
+                android:id="@+id/divider_top5_sources_nb_sources"
+                style="@style/LargeDividerStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_scale_top5" />
+
+            <!--tile for the number of sources-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_nb_sources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@color/regular_background_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_top5_sources_nb_sources">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/layout_nb_sources_title"
+                    style="@style/SectionTitleTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/regular_background_color"
+                    android:gravity="start|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/layout_nb_sources_block_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/statistics_bottom_grayed_view_height"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toLeftOf="@+id/layout_nb_sources_block_bluetooth"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_nb_sources_title">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/layout_nb_sources_img_wifi"
+                        style="@style/ProtocolImageStyle"
+                        app:srcCompat="@drawable/baseline_wifi_24" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/layout_nb_sources_wifi"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/regular_background_color"
+                        android:gravity="start|center_vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_nb_sources_block_bluetooth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/statistics_bottom_grayed_view_height"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toRightOf="@+id/layout_nb_sources_block_wifi"
+                    app:layout_constraintRight_toLeftOf="@+id/layout_nb_sources_block_cellular"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_nb_sources_title">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/layout_nb_sources_img_bluetooth"
+                        style="@style/ProtocolImageStyle"
+                        app:srcCompat="@drawable/baseline_bluetooth_24" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/layout_nb_sources_bluetooth"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/regular_background_color"
+                        android:gravity="start|center_vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_nb_sources_block_cellular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/statistics_bottom_grayed_view_height"
+                    android:orientation="horizontal"
+                    android:paddingRight="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/layout_nb_sources_block_bluetooth"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_nb_sources_title">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/layout_nb_sources_img_cellular"
+                        style="@style/ProtocolImageStyle"
+                        app:srcCompat="@drawable/baseline_signal_cellular_4_bar_24" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/layout_nb_sources_cellular"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/regular_background_color"
+                        android:gravity="start|center_vertical" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TableRow
+                android:id="@+id/divider_nb_sources_sources_type"
+                style="@style/LargeDividerStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_nb_sources" />
+
+            <!--tile for the type of sources-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_sources_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_nb_sources_sources_type">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/layout_sources_type_title"
+                    style="@style/SectionTitleTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/regular_background_color"
+                    android:gravity="start|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_sources_type_details"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_sources_type_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_sources_type_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/statistics_bottom_grayed_view_height"
+                    android:background="@color/lowest_level_background_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_sources_type_details" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TableRow
+                android:id="@+id/divider_bottom"
+                style="@style/LargeDividerStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_horizontal_156dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="156dp" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/all_ui_components_except_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="textViewYourExposure, textViewExposureValue, textViewExposureUnit, imageViewExposureDiff, textViewExposureValueDiff, recommendationDot, textViewRecommendation, scale_chevron, scale_chevron_tap_view, scroll_view_backward, horizontal_scroll_view, layout_top_5_sources, scroll_view_forward, divider_statistics_scale_top5_sources, layout_scale_top5, divider_nb_sources_sources_type, layout_sources_type, layout_nb_sources, divider_top5_sources_nb_sources" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_horizontal_196dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="196dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/statistics_no_data"
+        style="@style/LargePrimaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

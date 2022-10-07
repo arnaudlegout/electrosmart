@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.inria.es.electrosmart">
+
+    <!-- ################ NORMAL PERMISSIONS ########################## -->
+    <!-- WRITE_EXTERNAL_STORAGE is considered dangerous only starting with 23 -->
+    <!-- This permission is used to write the logcat file for debugging purpose only -->
+    <!-- This is why this permission is only present in the debug version -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <!-- READ_SYNC_STATS is required to know when the sync has started/terminated. -->
+    <!-- We use this in AboutActivity for onclick event manual sync in debug mode only -->
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+</manifest>

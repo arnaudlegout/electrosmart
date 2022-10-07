@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+General rules for styles  definitions
+
+1)
+-->
+
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ####################### NEW STYLE CONFIGURATION BEGIN #################### -->
+    <!-- ....................... MAIN TEXT CONFIGURATION BEGIN ..................... -->
+    <!-- used for the exposure summary value only -->
+    <style name="ExposureSummaryStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/exposure_summary_text_size</item>
+    </style>
+
+    <!-- Used for explanation or on-boarding text, the size is adapted to the screen width (see sw360dp) -->
+    <style name="ExplanationPrimaryTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/explanation_primary_text_size</item>
+    </style>
+
+    <!-- Used for explanation or on-boarding text, the size is adapted to the screen width (see sw360dp) -->
+    <style name="ExplanationSecondaryTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:textSize">@dimen/explanation_secondary_text_size</item>
+    </style>
+
+
+    <!--  Used for large primary text  -->
+    <style name="LargePrimaryTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/large_primary_text_size</item>
+    </style>
+
+    <!-- Used for section title text within a fragment -->
+    <style name="SectionTitleTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/section_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--  Used for normal text  -->
+    <style name="PrimaryTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/primary_text_size</item>
+    </style>
+
+    <!--  Used for normal text when we need it light  -->
+    <style name="LightPrimaryTextStyle" parent="PrimaryTextStyle">
+        <item name="android:textColor">@color/secondary_text_color</item>
+    </style>
+
+    <!--  Used for normal text when we need it as an hyperlink  -->
+    <style name="HyperlinkPrimaryTextStyle" parent="PrimaryTextStyle">
+        <item name="android:textColor">@color/default_blue</item>
+    </style>
+
+    <!--  Used for secondary text  -->
+    <style name="SecondaryTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:textSize">@dimen/secondary_text_size</item>
+    </style>
+
+    <!--  Used for secondary text when we need it as an hyperlink  -->
+    <style name="HyperlinkSecondaryTextStyle" parent="SecondaryTextStyle">
+        <item name="android:textColor">@color/default_blue</item>
+    </style>
+
+    <!-- We have 3 styles specific to the detailed signal views (in simple and advanced mode) -->
+    <style name="DetailedSignalsTextStyle" parent="SecondaryTextStyle">
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="ItalicDetailedSignalsTextStyle" parent="DetailedSignalsTextStyle">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="ExposureDetailedSignalsSimpleModeTextStyle" parent="DetailedSignalsTextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- ....................... MAIN TEXT CONFIGURATION END ............................. -->
+
+
+    <style name="LargeDividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/large_divider_width</item>
+        <item name="android:background">@color/lowest_level_background_color</item>
+    </style>
+
+    <!--  Style for the connected icon  -->
+    <style name="SourceConnectedImageViewStyle">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:tint">@color/secondary_icon_color</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <!-- Style for the signal type (Wi-Fi, BT, Cellular) icon -->
+    <style name="ProtocolImageStyle" parent="android:Widget.TextView">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:tint">@color/secondary_icon_color</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the title and the text in the buttons -->
+        <item name="android:textColor">@color/primary_text_color</item>
+        <!-- Used for the text in the dialog -->
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <item name="colorAccent">@color/primary_text_color</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/alert_dialog_background</item>
+        <!-- Used to color the text of list items when we edit a ListItemPreference -->
+        <item name="textColorAlertDialogListItem">@color/primary_text_color</item>
+    </style>
+
+    <style name="PrimaryButtonStyle" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:padding">15dp</item>
+        <item name="android:textColor">@color/inverted_primary_text_color</item>
+        <item name="android:textSize">@dimen/primary_text_size</item>
+        <item name="android:background">@drawable/es_button_blue</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SecondaryButtonStyle" parent="PrimaryButtonStyle">
+        <item name="android:background">@drawable/gray_stroke</item>
+        <item name="android:textColor">@color/secondary_text_color</item>
+    </style>
+
+    <!-- Drawer icon style -->
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/primary_text_color</item>
+    </style>
+
+    <!-- Style of the drop down menu of the FeedbackActivity -->
+    <style name="DropDownSpinnerStyle" parent="Widget.AppCompat.Spinner.Underlined" />
+
+    <!-- ####################### NEW STYLE CONFIGURATION END #################### -->
+
+
+    <style name="EsTextViewStyle" parent="android:Widget.TextView" />
+
+    <style name="preferenceThemeEs" parent="PreferenceThemeOverlay.v14.Material">
+        <item name="android:tint">@color/primary_icon_color</item>
+        <!-- Preference title text color -->
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+        <!-- Preference summary text color -->
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <!-- Preference title text size (deprecated, but still work) -->
+        <item name="android:keyTextSize">@dimen/primary_text_size</item>
+        <!-- Preference summary text size (deprecated, but still work) -->
+        <item name="android:labelTextSize">@dimen/secondary_text_size</item>
+    </style>
+
+    <!-- This empty style is needed for actionBarTheme item in the style -->
+    <style name="ActionBarTheme">
+        <!-- Color of the text in the action bar -->
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+    </style>
+
+    <!--  Theme to use if we do not need an ActionBar, e.g., for the on boarding or MainActivity
+          We use a RootEsTheme to factorize common theme between light and dark styles -->
+    <style name="RootESThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- make the status bar transparent (same color as background with icons in inverted color -->
+        <!-- the status bar color can be colored starting with API 21, but the
+        windowLightStatusBar that allows white status bar with dark icons is only available
+        starting with API 23 (m). So we must handle the special case of API 21 and 22 that will
+        have a white background with light icons. In that case we must force a dark
+        background -->
+        <item name="colorPrimaryDark">@color/regular_background_color</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <!-- used by Android to show previews, not clear the goal, but does not hurt to be set -->
+        <item name="android:windowBackground">@color/regular_background_color</item>
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/regular_background_color</item>
+
+        <!-- Accent used in the navigation drawer, navigation arrows, and in the settings -->
+        <item name="colorControlHighlight">@color/accent_color</item>
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/default_blue</item>
+
+        <!-- Text color used for the hint in an EditText field-->
+        <item name="android:textColorHint">@color/secondary_text_color</item>
+
+        <item name="android:textViewStyle">@style/EsTextViewStyle</item>
+        <item name="android:buttonStyle">@style/PrimaryButtonStyle</item>
+        <!-- Used to color the back arrow in the action bar when we navigate -->
+        <item name="colorControlNormal">@color/primary_text_color</item>
+
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!-- For the actionbar theme (text and back arrow) -->
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="alertDialogTheme">@style/AlertDialogStyle</item>
+        <item name="preferenceTheme">@style/preferenceThemeEs</item>
+    </style>
+
+    <!-- The theme to be used in the app when we do not want an action bar -->
+    <style name="EsThemeNoActionBar" parent="RootESThemeNoActionBar" />
+
+    <!-- Base application theme to use when we need the action bar
+         We use a RootEsTheme to factorize common theme between light and dark styles -->
+    <style name="RootEsThemeActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- make the status bar transparent (same color as background with icons in inverted color -->
+        <!-- the status bar color can be colored starting with API 21, but the
+        windowLightStatusBar that allows white status bar with dark icons is only available
+        starting with API 23 (m). So we must handle the special case of API 21 and 22 that will
+        have a white background with light icons. In that case we must force a dark
+        background -->
+        <item name="colorPrimaryDark">@color/regular_background_color</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <!-- used by Android to show previews, not clear the goal, but does not hurt to be set -->
+        <item name="android:windowBackground">@color/regular_background_color</item>
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/regular_background_color</item>
+
+        <!-- Accent used in the navigation drawer, navigation arrows, and in the settings -->
+        <item name="colorControlHighlight">@color/accent_color</item>
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/default_blue</item>
+
+        <!-- Text color used for the hint in an EditText field-->
+        <item name="android:textColorHint">@color/secondary_text_color</item>
+
+        <item name="android:textViewStyle">@style/EsTextViewStyle</item>
+        <item name="android:buttonStyle">@style/PrimaryButtonStyle</item>
+        <!-- Used to color the back arrow in the action bar when we navigate -->
+        <item name="colorControlNormal">@color/primary_text_color</item>
+
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!-- For the actionbar theme (text and back arrow) -->
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="alertDialogTheme">@style/AlertDialogStyle</item>
+        <item name="preferenceTheme">@style/preferenceThemeEs</item>
+    </style>
+
+    <!-- The theme to be used in the app when we want an action bar -->
+    <style name="EsTheme" parent="RootEsThemeActionBar" />
+
+</resources>

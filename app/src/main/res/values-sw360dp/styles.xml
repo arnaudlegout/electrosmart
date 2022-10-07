@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    These styles are used to override the default styles on android devices with available
+    width 360dp or more (latest devices).
+    -->
+
+    <!-- Used for explanation or on-boarding text, the size is adapted to the screen width (see sw360dp) -->
+    <style name="ExplanationPrimaryTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/explanation_primary_text_size_360dp</item>
+    </style>
+
+    <!-- Used for explanation or on-boarding text, the size is adapted to the screen width (see sw360dp) -->
+    <style name="ExplanationSecondaryTextStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:textSize">@dimen/explanation_secondary_text_size_360dp</item>
+    </style>
+
+</resources>

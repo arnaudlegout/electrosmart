@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".activities.FeedbackActivity">
+
+    <TextView
+        style="@style/SectionTitleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/feedback_type_chooser_title" />
+
+    <Spinner
+        android:id="@+id/feedback_spinner"
+        style="@style/DropDownSpinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="@dimen/primary_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/feedback_text_body"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:hint="@string/feedback_message_input_hint" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox_profileid"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:checked="true"
+        android:text="@string/feedback_profileid_checkbox_text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/send_feedback_button"
+        style="@style/PrimaryButtonStyle"
+        android:text="@string/feedback_send_button_text" />
+</LinearLayout>

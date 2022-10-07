@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    BSD 3-Clause License
+
+    Copyright (c) 2014-2022, Arnaud Legout (arnaudlegout), centre Inria de
+    l'Université Côte d'Azur, France. Contact: arnaud.legout@inria.fr
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="left">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Set the elevation of the app bar layout to 0dp so that we don't have a divider -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header_measurement"
+                android:layout_width="match_parent"
+                android:layout_height="100sp">
+                <!-- We must set the title to " " because otherwise the toolbar expends too much and
+                overlap the progress bar, which reduces the clickable area, note that an empty string
+                does not work as the toolbar will expand as if no title is specified -->
+                <!--
+                -->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/main_activity_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:title=" " />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:background="#0fff"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/tab_indicator_color"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabMode="fixed" />
+
+                <ProgressBar
+                    android:id="@+id/exposure_summary_progress_bar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="120sp"
+                    android:layout_height="120sp"
+                    android:max="133"
+                    android:progressDrawable="@drawable/progress_bar_three_quarters_white"
+                    android:secondaryProgress="100"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/exposure_summary_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="@id/exposure_summary_progress_bar"
+                    app:layout_constraintLeft_toLeftOf="@id/exposure_summary_progress_bar"
+                    app:layout_constraintRight_toRightOf="@id/exposure_summary_progress_bar"
+                    app:layout_constraintTop_toTopOf="@id/exposure_summary_progress_bar"
+                    app:layout_constraintVertical_bias="0.45" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/exposure_summary_scale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exposure_score_scale"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="10sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/exposure_summary_value"
+                    app:layout_constraintStart_toEndOf="@id/exposure_summary_value" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/exposure_summary_metric"
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/exposure_summary_progress_bar"
+                    app:layout_constraintLeft_toLeftOf="@+id/exposure_summary_progress_bar"
+                    app:layout_constraintRight_toRightOf="@+id/exposure_summary_progress_bar"
+                    app:layout_constraintTop_toTopOf="@+id/exposure_summary_progress_bar"
+                    app:layout_constraintVertical_bias="0.78" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Layout to contain contents of main body of screen (drawer will slide over this) -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/lowest_level_background_color" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/lowest_level_background_color" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="start"
+            android:background="@color/regular_background_color"
+            app:itemIconTint="@drawable/bottom_navigation_colors"
+            app:itemTextColor="@drawable/bottom_navigation_colors"
+            app:menu="@menu/activity_main_bottom_drawer" />
+
+    </LinearLayout>
+
+    <!-- Container for contents of the drawer - use NavigationView to make configuration easier -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/regular_background_color"
+        android:fitsSystemWindows="false"
+        app:headerLayout="@layout/activity_main_drawer_header"
+        app:itemIconTint="@color/primary_icon_color"
+        app:itemTextColor="@color/primary_text_color"
+        app:menu="@menu/activity_main_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

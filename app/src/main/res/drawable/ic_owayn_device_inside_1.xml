@@ -1,0 +1,97 @@
+<!--
+    BSD 3-Clause License
+
+    Copyright (c) 2014-2022, Arnaud Legout (arnaudlegout), centre Inria de
+    l'Université Côte d'Azur, France. Contact: arnaud.legout@inria.fr
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="600dp"
+    android:height="400dp"
+    android:viewportWidth="600"
+    android:viewportHeight="400">
+    <path
+        android:fillAlpha="0"
+        android:fillColor="@color/white"
+        android:pathData="M0,0h600v400h-600z"
+        android:strokeAlpha="0" />
+    <path
+        android:fillColor="@color/secondary_text_color"
+        android:pathData="M300,374.85a3.67,3.67 0,0 0,4.35 -2.76,3.93 3.93,0 0,0 0.15,-0.68l28.81,-194.23a4,4 0,0 0,-0.57 -2.81,2.91 2.91,0 0,0 -2.19,-1.35h-0.12a436.84,436.84 0,0 1,-112.78 -22.78,436.91 436.91,0 0,1 -105.82,-45 2.76,2.76 0,0 0,-0.7 -0.32,3 3,0 0,0 -1.88,0.05 4,4 0,0 0,-2.13 1.91l-0.06,0.13L20.87,283.4a3.92,3.92 0,0 0,1.22 5.14,3 3,0 0,0 0.55,0.24c52.07,16.16 93.48,35.17 123.07,56.5a2.89,2.89 0,0 0,2.52 0.43,3.88 3.88,0 0,0 2.21,-1.78 4.21,4.21 0,0 0,0.44 -1l9.75,-31.4 1.78,1.07 1,0.63a27.8,27.8 0,0 0,2.75 1.57l0.38,0.19 0.41,0.06a27.85,27.85 0,0 0,3.16 0.26c0.4,0 0.79,0 1.19,0.06l2.08,0.12 -9.75,31.4a3.67,3.67 0,0 0,2 4.73,3 3,0 0,0 0.93,0.13C203.06,350.92 248,358.69 300,374.85ZM322.69,203.19 L298.51,366.19 296.6,365.61C249.5,351.41 208.15,344.13 173.73,344h-2.19l9,-29 1.06,-0.23c13.92,-3 25.16,-14.79 35.39,-37 9.56,-20.72 17.39,-48.3 26.46,-80.25l1.88,-6.64 1.61,0.42a373.07,373.07 0,0 0,74 11.75ZM111.14,113.91l1.47,0.85a450.69,450.69 0,0 0,102.7 43h0.08a449.63,449.63 0,0 0,109 22.73l1.7,0.14 -2.21,14.9 -1.66,-0.11a440.41,440.41 0,0 1,-99 -18.6c-4.19,-1.3 -8.34,-2.66 -12.49,-4.08A439.4,439.4 0,0 1,106 128.29l-1.42,-0.84ZM146,336.05l-1.81,-1.24c-28.46,-19.35 -66.67,-36.75 -113.56,-51.71l-1.9,-0.61 72.35,-148.06 1.48,0.9a373.31,373.31 0,0 0,67.69 32.23l1.56,0.56 -2.2,6.55C159,206.13 149.87,233.3 146,255.8c-4.12,24.06 -1.5,40.1 8.25,50.49l0.75,0.8ZM169.08,307.49 L168.85,307.49 168.64,307.38c-14.56,-7.25 -19.9,-20.42 -17.32,-42.73 2.44,-21 11.73,-49.63 24.59,-87.76l2.19,-6.51 1.58,0.54c10.23,3.53 19.82,6.55 28.66,9.29s18.46,5.68 28.89,8.57l1.61,0.45L237,195.8c-11,38.71 -19.52,67.56 -29.41,86.27C197.09,301.92 185.23,309.76 169.12,307.49Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M232.61,125.48l2.95,-4.13a2.76,2.76 0,0 1,4.53 3.16l-0.05,0.07 -2.77,4.06 -0.05,0.06a2.82,2.82 0,1 1,-4.65 -3.18Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M241.94,113.18l6.83,-7.78a2.55,2.55 0,0 1,3.86 3.32l-0.1,0.11 -6.47,7.7 -0.09,0.11a2.65,2.65 0,0 1,-4.07 -3.41Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M256,98l7.66,-6.94a2.33,2.33 0,0 1,3.17 3.41l-0.1,0.09 -7.31,6.92 -0.1,0.1A2.44,2.44 0,1 1,256 98.06Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M271.72,84.6l8.4,-6a2.11,2.11 0,0 1,2.49 3.4l-0.09,0.08 -8.07,6 -0.1,0.08a2.22,2.22 0,0 1,-2.66 -3.56Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M288.83,73.05l9,-5a1.89,1.89 0,0 1,1.88 3.29l-0.09,0 -8.71,5.1 -0.1,0a2,2 0,1 1,-2 -3.45Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M307.11,63.54l9.51,-4a1.68,1.68 0,0 1,2.19 0.91,1.66 1.66,0 0,1 -0.87,2.17l-0.09,0 -9.24,4.09 -0.09,0a1.79,1.79 0,0 1,-1.44 -3.27Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M326.33,56.17l9.87,-2.86a1.46,1.46 0,0 1,0.85 2.79l-0.08,0 -9.65,3 -0.09,0a1.57,1.57 0,1 1,-0.94 -3Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M346.23,51l10.13,-1.72a1.24,1.24 0,0 1,0.44 2.44l-0.07,0 -10,1.91h-0.07A1.35,1.35 0,1 1,346.2 51Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M366.56,48.14l10.25,-0.57a1,1 0,0 1,0.14 2h-0.06l-10.11,0.78h-0.07a1.13,1.13 0,1 1,-0.17 -2.26Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M387.07,47.58l10.23,0.6a0.81,0.81 0,0 1,-0.07 1.62h-0.05L387,49.42h0a0.92,0.92 0,1 1,0.07 -1.84Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M407.47,49.36l10.09,1.76a0.59,0.59 0,0 1,-0.19 1.17h0l-10,-1.53h0a0.7,0.7 0,0 1,0.21 -1.39Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M427.52,53.45l9.81,2.89a0.38,0.38 0,0 1,-0.21 0.73h0l-9.82,-2.67h0a0.49,0.49 0,0 1,-0.34 -0.6,0.5 0.5,0 0,1 0.6,-0.34Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M447,59.78l9.4,4a0.16,0.16 0,0 1,0.09 0.21,0.15 0.15,0 0,1 -0.21,0.08h0l-9.46,-3.77h0a0.27,0.27 0,0 1,-0.15 -0.35,0.27 0.27,0 0,1 0.35,-0.15Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M465.53,68.28l4.39,2.39 -4.44,-2.3a0.06,0.06 0,0 1,0 -0.07,0 0,0 0,1 0.07,0Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M225.87,141.89c6.88,-5.36 16.62,-11.27 24.59,-13.74l-14.25,-3 -9,-11.41C228.52,122 227.59,133.33 225.87,141.89Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M479,155.86 L492.5,163c1.07,0.56 2.62,-0.31 3.48,-1.95s0.7,-3.41 -0.36,-4l-13.47,-7.09c-1.06,-0.55 -2.62,0.32 -3.48,1.95S478,155.3 479,155.86Z" />
+    <path
+        android:fillColor="@color/primary_text_color"
+        android:pathData="M574.54,53.09 L523.15,26c-4.94,-2.6 -11.45,-0.06 -14.44,5.63L451.09,141.15c-3,5.69 -1.4,12.49 3.54,15.09l51.38,27c4.94,2.6 11.45,0.07 14.45,-5.62L578.08,68.18C581.07,62.49 579.47,55.69 574.54,53.09ZM515.32,175c-1.32,2.51 -4,3.55 -6.19,2.41l-51.39,-27.05c-2.18,-1.15 -2.84,-3.95 -1.52,-6.46l5.46,-10.36 59.09,31.1ZM523.88,158.72 L464.79,127.62 508.39,44.77 567.49,75.87ZM572.94,65.51 L570.6,69.95 511.51,38.85 513.84,34.41c1.33,-2.51 4,-3.56 6.19,-2.41L571.42,59C573.6,60.15 574.26,63 572.94,65.47Z" />
+</vector>

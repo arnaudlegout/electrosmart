@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_scale"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginStart="@dimen/_exposure_scale_marginLeftRight"
+    android:layout_marginLeft="@dimen/_exposure_scale_marginLeftRight"
+    android:layout_marginTop="@dimen/_exposure_scale_marginTop"
+    android:layout_marginEnd="@dimen/_exposure_scale_marginLeftRight"
+    android:layout_marginRight="@dimen/_exposure_scale_marginLeftRight"
+    android:layout_marginBottom="@dimen/_exposure_scale_marginBottom"
+    app:layout_constraintTop_toBottomOf="@+id/guideline_horizontal_196dp"
+    tools:showIn="@layout/fragment_home">
+
+    <TableRow
+        android:id="@+id/scale_low"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fh_exposure_scale_height"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/recommendation_dot_green"
+        app:layout_constraintEnd_toStartOf="@+id/scale_medium"
+        app:layout_constraintHorizontal_weight="42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scale_low_start"
+        style="@style/SecondaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/scale_low"
+        app:layout_constraintTop_toBottomOf="@+id/scale_low" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scale_medium_start"
+        style="@style/SecondaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/scale_medium"
+        app:layout_constraintStart_toStartOf="@+id/scale_medium"
+        app:layout_constraintTop_toBottomOf="@+id/scale_medium" />
+
+    <TableRow
+        android:id="@+id/scale_medium"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fh_exposure_scale_height"
+        android:background="@color/recommendation_dot_orange"
+        app:layout_constraintEnd_toStartOf="@+id/scale_high"
+        app:layout_constraintHorizontal_weight="28"
+        app:layout_constraintStart_toEndOf="@+id/scale_low"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scale_medium_end"
+        style="@style/SecondaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/scale_medium"
+        app:layout_constraintStart_toEndOf="@+id/scale_medium"
+        app:layout_constraintTop_toBottomOf="@+id/scale_medium" />
+
+    <TableRow
+        android:id="@+id/scale_high"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fh_exposure_scale_height"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="30"
+        android:background="@color/recommendation_dot_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="30"
+        app:layout_constraintStart_toEndOf="@+id/scale_medium"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scale_high_end"
+        style="@style/SecondaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/scale_high"
+        app:layout_constraintTop_toBottomOf="@+id/scale_high" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

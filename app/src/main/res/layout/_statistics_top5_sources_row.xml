@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/ripple"
+    android:orientation="vertical"
+    tools:showIn="@layout/fragment_statistics">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/protocol_image"
+            style="@style/ProtocolImageStyle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_source_name"
+                style="@style/PrimaryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:paddingRight="@dimen/fh_source_name_paddingRight" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_connected"
+                style="@style/SourceConnectedImageViewStyle"
+                app:srcCompat="@drawable/ic_insert_link_black_24dp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/new_source"
+            android:layout_width="@dimen/statistics_new_source_image_width"
+            android:layout_height="@dimen/statistics_new_source_image_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:tint="@color/default_blue"
+            app:srcCompat="@drawable/ic_fiber_new_black_24dp" />
+
+        <View
+            android:id="@+id/exposition_dot"
+            android:layout_width="@dimen/fh_recommendation_dot_layout_width"
+            android:layout_height="@dimen/fh_recommendation_dot_layout_height"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/circle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/exposition_chevron"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:tint="@color/small_chevron_color"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+    </LinearLayout>
+
+    <TableRow
+        android:id="@+id/source_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:background="@color/lowest_level_background_color"
+        android:visibility="visible" />
+</LinearLayout>

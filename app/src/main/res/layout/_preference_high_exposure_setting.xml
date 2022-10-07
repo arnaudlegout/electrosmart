@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+This layout was inspired from android's default preference layout
+https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/preference/preference/res/layout/preference.xml
+
+Only things added were the exposure scale (include) and seekbar in the relativelayout.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingEnd="?android:attr/scrollbarSize"
+    android:paddingRight="?android:attr/scrollbarSize">
+
+    <FrameLayout
+        android:id="@+id/icon_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.preference.internal.PreferenceImageView
+            android:id="@android:id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:maxHeight="48dp"
+            app:maxWidth="48dp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="6dip"
+        android:layout_marginEnd="6dip"
+        android:layout_marginRight="6dip"
+        android:layout_marginBottom="6dip"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_text"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fadingEdge="horizontal"
+            android:maxLines="1"
+            android:text="@string/settings_preference_notification_exposure_threshold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subtitle_text"
+            style="@style/SecondaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_text"
+            android:layout_alignStart="@android:id/title"
+            android:layout_alignLeft="@android:id/title"
+            android:maxLines="4" />
+
+        <include
+            android:id="@+id/included_exposure_scale"
+            layout="@layout/_exposure_scale"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@id/subtitle_text"
+            android:layout_alignStart="@id/title_text"
+            android:layout_alignLeft="@id/title_text"
+            android:layout_marginTop="@dimen/_exposure_scale_marginTop"
+            android:layout_marginEnd="@dimen/_exposure_scale_marginLeftRight"
+            android:layout_marginRight="@dimen/_exposure_scale_marginLeftRight"
+            android:paddingStart="0dp"
+            android:paddingLeft="0dp"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/high_exposure_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/included_exposure_scale"
+            android:layout_alignStart="@id/title_text"
+            android:layout_alignLeft="@id/title_text"
+            android:layout_marginTop="@dimen/preference_exposure_threshold_marginTop"
+            android:layout_marginEnd="@dimen/_exposure_scale_marginLeftRight"
+            android:layout_marginRight="@dimen/_exposure_scale_marginLeftRight"
+            android:hapticFeedbackEnabled="true"
+            android:max="150"
+            android:paddingStart="0dp"
+            android:paddingLeft="0dp"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="10dp"
+            android:progressDrawable="@drawable/progress_high_exposure_threshold_setting"
+            android:thumb="@drawable/seek_bar_thumb"
+            android:thumbOffset="0dp" />
+    </RelativeLayout>
+    <!-- Preference should place its actual preference widget here. -->
+    <LinearLayout
+        android:id="@android:id/widget_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical" />
+</LinearLayout>

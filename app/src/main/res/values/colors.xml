@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+General rules for color definitions
+
+1) Never refer to a color that is not defined in this file. All colors must be centralized
+in this file. Always check whether a relevant color is not already created in this file.
+
+2) Do not mix colors for text with other colors. Text colors must be used only for text.
+-->
+<resources>
+    <!-- Colors for text must not be used for anything else but text -->
+    <color name="primary_text_color">@color/black</color>
+    <color name="secondary_text_color">@color/gray_600</color>
+    <!-- Colors when the text is presented on a dark background, such as a colored button-->
+    <color name="inverted_primary_text_color">@color/white</color>
+
+    <!-- Colors for icons used with the text -->
+    <color name="primary_icon_color">@color/black</color>
+    <color name="secondary_icon_color">@color/gray_600</color>
+
+    <!-- Colors for the accent (ripple effect on components -->
+    <color name="accent_color">@color/blue_100</color>
+
+    <!-- Colors for icons used in the bottom navigation bar -->
+    <color name="bottom_nav_item_unchecked_color">@color/gray_900</color>
+    <color name="bottom_nav_item_checked_color">@color/default_blue</color>
+
+    <!--  Color of the lowest level background. It is typically used for dividers -->
+    <color name="lowest_level_background_color">@color/gray_250</color>
+
+    <!-- Color of the second level background. It is used for all the rest, typically used for
+    all cards, that is everything on top of the lowest level background -->
+    <color name="regular_background_color">@color/gray_50</color>
+
+    <!--  Color of the background of the alert dialogs -->
+    <color name="alert_dialog_background">@color/gray_250</color>
+
+    <!-- Color of the chevron used in home and statistic fragments   -->
+    <color name="small_chevron_color">@color/gray_600</color>
+
+    <!-- Background color of the progress bars (when they are not filled) -->
+    <color name="progress_bar_background_color">@color/gray_400</color>
+
+    <!-- Color for a disabled or secondary button -->
+    <color name="secondary_button_color">@color/gray_400</color>
+
+    <!-- recommendation -->
+    <color name="recommendation_dot_green">@color/green_300</color>
+    <color name="recommendation_dot_orange">@color/orange_300</color>
+    <color name="recommendation_dot_red">@color/red_300</color>
+
+    <color name="recommendation_dot_green_10percent_transparent">
+        @color/green_300_transparency_10
+    </color>
+    <color name="recommendation_dot_orange_10percent_transparent">
+        @color/orange_300_transparency_10
+    </color>
+    <color name="recommendation_dot_red_10percent_transparent">
+        @color/red_300_transparency_10
+    </color>
+
+    <!-- Default blue color used in the app -->
+    <color name="default_blue">@color/blue_500</color>
+    <color name="light_blue">@color/blue_300</color>
+
+    <!-- Colors for the ripple when we touch a tile -->
+    <color name="ripple_default_background">@color/regular_background_color</color>
+    <color name="ripple_state_pressed">@color/accent_color</color>
+
+    <!-- #### Colors specific to the instrument #### -->
+    <!--  Used for the exposure score circled progress bar for the instrument -->
+    <color name="exposure_summary_progress_bar_color">@color/default_blue</color>
+    <color name="exposure_summary_progress_bar_background_color">@color/gray_300</color>
+
+    <!-- Color used to show the selected tab in the instrument -->
+    <color name="tab_indicator_color">@color/gray_600</color>
+
+    <!-- Color for the error message in the instrument only-->
+    <color name="error_background">@color/deep_orange_700_transparency_10</color>
+    <color name="error_logo">@color/deep_orange_700</color>
+
+    <!-- Color of the chart when there is no data -->
+    <color name="curves_no_data_color">@color/gray_400</color>
+
+    <!-- Color of the background of the chart -->
+    <color name="chart_background_shape_color">@color/gray_300</color>
+
+
+    <!-- ######### Reference colors, DO NOT USE THESE COLORS DIRECTLY OUTSIDE OF THIS FILE #######
+
+    Do not use color codes directly, but always define an explicit color name below to used
+    elsewhere
+    -->
+
+    <!-- Black -->
+    <color name="black">#000000</color>
+
+    <!-- White -->
+    <color name="white">#fff</color>
+
+    <!-- White with 87% opacity -->
+    <color name="white_dark_mode">#DEFFFFFF</color>
+
+    <!-- Material gray colors-->
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_150">#F0F0F0</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_250">#E7E7E7</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+    <color name="dark_gray">#121212</color>
+
+    <!-- Material blue colors -->
+    <color name="blue_50">#e3f2fd</color>
+    <color name="blue_100">#bbdefb</color>
+    <color name="blue_200">#90caf9</color>
+    <color name="blue_300">#64b5f6</color>
+    <color name="blue_400">#42A5F5</color>
+    <color name="blue_500">#2196f3</color>
+
+    <!-- Material green colors -->
+    <color name="green_300">#81c784</color>
+    <color name="green_300_transparency_10">#1A81C784</color>
+    <color name="green_400">#66BB6A</color>
+    <color name="green_500">#4CAF50</color>
+
+    <!-- Material green colors -->
+    <color name="light_green_300">#aed581</color>
+    <color name="light_green_400">#76FF03</color>
+    <color name="light_green_400_transparency_10">#1A76FF03</color>
+
+    <!-- Material orange colors -->
+    <color name="orange_300">#ffb74d</color>
+    <color name="orange_300_transparency_10">#1AFFB74D</color>
+    <color name="orange_400">#FFA726</color>
+    <color name="orange_500">#FF9800</color>
+
+    <!-- Material orange colors -->
+    <color name="light_yellow_300">#fff176</color>
+    <color name="light_yellow_400">#FFEA00</color>
+    <color name="light_yellow_400_transparency_10">#1AFFEA00</color>
+
+    <!-- Material deep orange colors -->
+    <color name="deep_orange_300">#ff8a65</color>
+    <color name="deep_orange_400">#FF7043</color>
+    <color name="deep_orange_500">#FF5722</color>
+    <color name="deep_orange_700">#E64A19</color>
+    <color name="deep_orange_700_transparency_10">#1AE64A19</color>
+
+    <!-- Material red colors -->
+    <color name="red_300">#E57373</color>
+    <color name="red_300_transparency_10">#1AE57373</color>
+    <color name="red_400">#EF5350</color>
+    <color name="red_500">#F44336</color>
+
+</resources>
