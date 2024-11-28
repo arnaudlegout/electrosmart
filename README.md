@@ -3,7 +3,7 @@
 ElectroSmart is an academic research project started in 2014 by 
 [Arnaud Legout](https://www-sop.inria.fr/members/Arnaud.Legout/) at Inria, Sophia Antipolis, France.
 
-The academic Web page of the project is [here](https://www-sop.inria.fr/members/Arnaud.Legout/Projects/electrosmart.html)
+The academic Web page of the project is [here](https://www-sop.inria.fr/members/Arnaud.Legout/Projects/electrosmart.html).
 The public Web page of the project (quite old and not up to date) is [here](https://electrosmart.app/)
 
 Late 2022, I did not have the resources to maintain ElectroSmart anymore. This is why I decided to
@@ -14,7 +14,7 @@ compatible with Android 13.
 
 ### What is this repository for? ###
 
-This repository is here for anyone willing to fork, use, learn, contribute, etc.
+This repository is here for anyone willing to fork, use, contribute, learn, etc.
 
 ### How do I get set up? ###
 
