@@ -9,7 +9,7 @@ Late 2022, I did not have the resources to maintain ElectroSmart anymore. This i
 open source the code in October 2022 under a BSD 3-Clause License.
 
 ElectroSmart latest developments and tests were performed against Android 12. It is, however, still 
-compatible with Android 13. You can access the latest compiled APK [1.28R118](https://github.com/arnaudlegout/electrosmart/compiled_APK/app-release_1.28R118.apk). You can check the integrity of the file using sha256sum. The sha256sum must be `379cd889d78839e5d468c104f62d96003f75b211914a64688f6f1c5793e8edd6`.
+compatible with Android 13. You can access the latest compiled APK [1.28R118](https://github.com/arnaudlegout/electrosmart/blob/main/compiled_APK/app-release_1.28R118.apk). You can check the integrity of the file using sha256sum. The sha256sum must be `379cd889d78839e5d468c104f62d96003f75b211914a64688f6f1c5793e8edd6`.
 
 ### What is this repository for? ###
 
